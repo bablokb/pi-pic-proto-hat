@@ -615,17 +615,6 @@ F 3 "~" H 700 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x13_Male J22
-U 1 1 5E376781
-P 4300 5400
-F 0 "J22" H 4408 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 4408 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 4300 5400 50  0001 C CNN
-F 3 "~" H 4300 5400 50  0001 C CNN
-	1    4300 5400
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR017
 U 1 1 5E37C095
 P 900 6200
@@ -914,7 +903,7 @@ U 1 1 5E36E6DD
 P 7500 3850
 F 0 "C1" H 7615 3896 50  0000 L CNN
 F 1 "100n" H 7615 3805 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 7538 3700 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 7538 3700 50  0001 C CNN
 F 3 "~" H 7500 3850 50  0001 C CNN
 	1    7500 3850
 	1    0    0    -1  
@@ -1018,44 +1007,6 @@ Wire Wire Line
 Connection ~ 900  6000
 Wire Wire Line
 	900  6000 900  6200
-Wire Wire Line
-	4500 4500 4500 4800
-Connection ~ 4500 4800
-Wire Wire Line
-	4500 4800 4500 4900
-Connection ~ 4500 4900
-Wire Wire Line
-	4500 4900 4500 5000
-Connection ~ 4500 5000
-Wire Wire Line
-	4500 5000 4500 5100
-Connection ~ 4500 5100
-Wire Wire Line
-	4500 5100 4500 5200
-Connection ~ 4500 5200
-Wire Wire Line
-	4500 5200 4500 5300
-Connection ~ 4500 5300
-Wire Wire Line
-	4500 5300 4500 5400
-Connection ~ 4500 5400
-Wire Wire Line
-	4500 5400 4500 5500
-Connection ~ 4500 5500
-Wire Wire Line
-	4500 5500 4500 5600
-Connection ~ 4500 5600
-Wire Wire Line
-	4500 5600 4500 5700
-Connection ~ 4500 5700
-Wire Wire Line
-	4500 5700 4500 5800
-Connection ~ 4500 5800
-Wire Wire Line
-	4500 5800 4500 5900
-Connection ~ 4500 5900
-Wire Wire Line
-	4500 5900 4500 6000
 NoConn ~ 4200 4800
 NoConn ~ 4200 4900
 NoConn ~ 4200 5000
@@ -1376,4 +1327,63 @@ Wire Wire Line
 Wire Wire Line
 	8400 2600 8500 2600
 Connection ~ 8400 2600
+$Comp
+L Connector:Conn_01x13_Male J22
+U 1 1 5E376781
+P 4300 5400
+F 0 "J22" H 4408 6089 50  0000 C CNN
+F 1 "Conn_01x13_Male" H 4408 6090 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 4300 5400 50  0001 C CNN
+F 3 "~" H 4300 5400 50  0001 C CNN
+	1    4300 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4500 4500 4800
+Connection ~ 4500 4800
+Wire Wire Line
+	4500 4800 4500 4900
+Connection ~ 4500 4900
+Wire Wire Line
+	4500 4900 4500 5000
+Connection ~ 4500 5000
+Wire Wire Line
+	4500 5000 4500 5100
+Connection ~ 4500 5100
+Wire Wire Line
+	4500 5100 4500 5200
+Connection ~ 4500 5200
+Wire Wire Line
+	4500 5200 4500 5300
+NoConn ~ 4500 5400
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5E48C144
+P 4750 4500
+F 0 "#PWR0101" H 4750 4350 50  0001 C CNN
+F 1 "+3.3V" H 4765 4673 50  0000 C CNN
+F 2 "" H 4750 4500 50  0001 C CNN
+F 3 "" H 4750 4500 50  0001 C CNN
+	1    4750 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 6000 4500 5900
+Connection ~ 4500 5600
+Wire Wire Line
+	4500 5600 4500 5500
+Connection ~ 4500 5700
+Wire Wire Line
+	4500 5700 4500 5600
+Connection ~ 4500 5800
+Wire Wire Line
+	4500 5800 4500 5700
+Connection ~ 4500 5900
+Wire Wire Line
+	4500 5900 4500 5800
+Wire Wire Line
+	4750 4500 4750 5500
+Wire Wire Line
+	4750 5500 4500 5500
+Connection ~ 4500 5500
 $EndSCHEMATC
