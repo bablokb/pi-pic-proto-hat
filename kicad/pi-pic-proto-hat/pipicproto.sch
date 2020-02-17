@@ -5,10 +5,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-01-26"
-Rev "1"
+Date "2020-02-17"
+Rev "F"
 Comp "Bernhard Bablok, Lothar Hiller"
-Comment1 ""
+Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 ""
 Comment3 ""
 Comment4 ""
