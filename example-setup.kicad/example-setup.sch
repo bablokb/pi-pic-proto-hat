@@ -1,0 +1,204 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Example Setup"
+Date "2020-02-23"
+Rev "1"
+Comp "Bernhard Bablok"
+Comment1 "https://github.com/bablokb/pi-pic-proto-hat/example-setup.kicad"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Switch:SW_Push SIG2
+U 1 1 5E522472
+P 3550 4400
+F 0 "SIG2" H 3550 4250 50  0000 C CNN
+F 1 "SW_Push" H 3550 4150 50  0000 C CNN
+F 2 "" H 3550 4600 50  0001 C CNN
+F 3 "~" H 3550 4600 50  0001 C CNN
+	1    3550 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SIG1
+U 1 1 5E5227F0
+P 5350 3950
+F 0 "SIG1" H 5350 4235 50  0000 C CNN
+F 1 "SW_Push" H 5350 4144 50  0000 C CNN
+F 2 "" H 5350 4150 50  0001 C CNN
+F 3 "~" H 5350 4150 50  0001 C CNN
+	1    5350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Microchip_PIC12:PIC12F675-IP U1
+U 1 1 5E522BF9
+P 4400 3950
+F 0 "U1" H 4400 4731 50  0000 C CNN
+F 1 "PIC12F675-IP" H 4400 4640 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5000 4600 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41190G.pdf" H 4400 3950 50  0001 C CNN
+	1    4400 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5E523DD8
+P 3000 3850
+F 0 "J1" H 3350 4300 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 3650 4200 50  0000 R CNN
+F 2 "" H 3000 3850 50  0001 C CNN
+F 3 "~" H 3000 3850 50  0001 C CNN
+	1    3000 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E523FAA
+P 3200 4200
+F 0 "R1" H 2950 4250 50  0000 L CNN
+F 1 "12K" H 2950 4150 50  0000 L CNN
+F 2 "" V 3130 4200 50  0001 C CNN
+F 3 "~" H 3200 4200 50  0001 C CNN
+	1    3200 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E5240BE
+P 3500 3950
+F 0 "R2" V 3400 3950 50  0000 C CNN
+F 1 "6.2K" V 3300 3950 50  0000 C CNN
+F 2 "" V 3430 3950 50  0001 C CNN
+F 3 "~" H 3500 3950 50  0001 C CNN
+	1    3500 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E5249C5
+P 5550 3500
+F 0 "#PWR04" H 5550 3250 50  0001 C CNN
+F 1 "GND" H 5555 3327 50  0000 C CNN
+F 2 "" H 5550 3500 50  0001 C CNN
+F 3 "" H 5550 3500 50  0001 C CNN
+	1    5550 3500
+	-1   0    0    1   
+$EndComp
+Text Notes 3000 3750 0    50   ~ 0
+-> Pi (gpio-poweroff)\n<- Pi (gpio-shutdown)
+Wire Wire Line
+	3800 3850 3200 3850
+Wire Wire Line
+	3750 4400 3750 4050
+Wire Wire Line
+	3750 4050 3800 4050
+$Comp
+L power:GND #PWR01
+U 1 1 5E564DE5
+P 3200 4550
+F 0 "#PWR01" H 3200 4300 50  0001 C CNN
+F 1 "GND" H 3205 4377 50  0000 C CNN
+F 2 "" H 3200 4550 50  0001 C CNN
+F 3 "" H 3200 4550 50  0001 C CNN
+	1    3200 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 5E567FB3
+P 5000 4700
+F 0 "J2" V 5154 4612 50  0000 R CNN
+F 1 "Conn_01x01_Male" V 5063 4612 50  0000 R CNN
+F 2 "" H 5000 4700 50  0001 C CNN
+F 3 "~" H 5000 4700 50  0001 C CNN
+	1    5000 4700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5000 4050 5000 4500
+Text Notes 5100 4450 0    50   ~ 0
+gate of mosfet
+NoConn ~ 5000 3850
+$Comp
+L power:GND #PWR02
+U 1 1 5E569071
+P 4400 4550
+F 0 "#PWR02" H 4400 4300 50  0001 C CNN
+F 1 "GND" H 4405 4377 50  0000 C CNN
+F 2 "" H 4400 4550 50  0001 C CNN
+F 3 "" H 4400 4550 50  0001 C CNN
+	1    4400 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5E5697B0
+P 4550 3350
+F 0 "#PWR03" H 4550 3200 50  0001 C CNN
+F 1 "+5V" V 4565 3478 50  0000 L CNN
+F 2 "" H 4550 3350 50  0001 C CNN
+F 3 "" H 4550 3350 50  0001 C CNN
+	1    4550 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 3950 3650 3950
+Wire Wire Line
+	3350 3950 3200 3950
+Wire Wire Line
+	3200 4050 3200 3950
+Connection ~ 3200 3950
+Wire Wire Line
+	3200 4350 3200 4400
+Wire Wire Line
+	3350 4400 3200 4400
+Connection ~ 3200 4400
+Wire Wire Line
+	3200 4400 3200 4550
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E56E778
+P 4750 3450
+F 0 "#FLG0101" H 4750 3525 50  0001 C CNN
+F 1 "PWR_FLAG" V 4750 3578 50  0000 L CNN
+F 2 "" H 4750 3450 50  0001 C CNN
+F 3 "~" H 4750 3450 50  0001 C CNN
+	1    4750 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E56EFBA
+P 4050 4650
+F 0 "#FLG0102" H 4050 4725 50  0001 C CNN
+F 1 "PWR_FLAG" H 4050 4823 50  0000 C CNN
+F 2 "" H 4050 4650 50  0001 C CNN
+F 3 "~" H 4050 4650 50  0001 C CNN
+	1    4050 4650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4050 4650 4050 4550
+Wire Wire Line
+	4050 4550 4400 4550
+Connection ~ 4400 4550
+Wire Wire Line
+	5550 3500 5550 3950
+Wire Wire Line
+	4400 3350 4500 3350
+Wire Wire Line
+	4750 3450 4500 3450
+Wire Wire Line
+	4500 3450 4500 3350
+Connection ~ 4500 3350
+Wire Wire Line
+	4500 3350 4550 3350
+Wire Wire Line
+	5000 3950 5150 3950
+$EndSCHEMATC
