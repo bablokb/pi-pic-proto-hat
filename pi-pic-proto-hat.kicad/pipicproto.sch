@@ -931,7 +931,7 @@ L Connector:Conn_01x02_Male J5
 U 1 1 5E38EB44
 P 8500 2400
 F 0 "J5" V 8562 2444 50  0000 L CNN
-F 1 "Conn_01x02_Male" V 8653 2444 50  0000 L CNN
+F 1 "Conn_01x02_Male" V 8750 2150 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8500 2400 50  0001 C CNN
 F 3 "~" H 8500 2400 50  0001 C CNN
 	1    8500 2400
@@ -1291,7 +1291,7 @@ L Connector:Conn_01x02_Male J4
 U 1 1 5E41EF6B
 P 7700 2400
 F 0 "J4" V 7762 2444 50  0000 L CNN
-F 1 "Conn_01x02_Male" V 7853 2444 50  0000 L CNN
+F 1 "Conn_01x02_Male" V 7950 2100 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7700 2400 50  0001 C CNN
 F 3 "~" H 7700 2400 50  0001 C CNN
 	1    7700 2400
@@ -1386,4 +1386,8 @@ Wire Wire Line
 Wire Wire Line
 	4750 5500 4500 5500
 Connection ~ 4500 5500
+Text Notes 5200 850  2    50   ~ 0
+5V to Pi\nPin 2/4
+Text Notes 7850 1450 0    50   ~ 0
+5V to ext.\nconnector J3 \n
 $EndSCHEMATC
