@@ -61,6 +61,11 @@ there is a prototyping area and a number of GND-pins and power pins
 
 ![](pcb-layout.png)
 
+Note that the project-directory contains a Fritzing-template
+(prototype-template.fzz) which is useful for prototyping:
+
+![](prototype-template.png)
+
 
 Manufacturing
 -------------
