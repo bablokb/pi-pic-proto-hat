@@ -7,6 +7,11 @@ are used as external signals to start and shutdown the Pi:
 
 ![](./example-firmware-schematic.png)
 
+A possible implementation on the prototyping-area shows this
+Fritzing view:
+
+![](./example-setup.png)
+
 Note that only one button is actually necessary, the schematic only
 illustrates that you can have two external signals to trigger boot or
 shutdown. In a real-world scenario the second signal would be sensor
