@@ -96,7 +96,7 @@ Flashing a Firmware
 -------------------
 
 The required firmware for the PIC depends on the specific setup you choose.
-In the directory [example-setup.firmware](./example-setup.firmware/Readme.md)
+In the directory [example-setup](./example-setup/Readme.md)
 you will find a ready to flash hex-file for a very basic setup with a
 on/off-button as external signal. The firmware also supports a second
 external signal.
