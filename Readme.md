@@ -20,6 +20,7 @@ IRF4905 (mosfet). In addition, there is a small prototyping area for
 buttons, sensors and alike.
 
 ![](pcb.png)
+![](pcb.jpg)
 
 If you are more familiar with a different family of MCUs (e.g. Atmega), you
 should modify the design of the pcb. The Kicad-sources are in the
