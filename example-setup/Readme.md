@@ -18,7 +18,7 @@ shutdown. In a real-world scenario the second signal would be sensor
 or maybe a rtc-clock.
 
 On the Pi-side you have to add the following lines in your
-`/boot/config.xt` (changes pins as needed):
+`/boot/config.xt` (change pins as needed):
 
     # initiate shutdown on high->low
     dtoverlay=gpio-shutdown,gpio_pin=27,gpio_pull=off
