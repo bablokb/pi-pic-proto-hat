@@ -35,7 +35,7 @@ The PIC part
 ![](schematic-pic.png)
 
 is a fairly standard implementation for the PIC featuring an
-ISCP (in-circuit-programming) connector J8
+ICSP (in-circuit-programming) connector J8
 and a connector for the pins GP0-GP2 and GP4-GP5. GP3 is connected to a
 switch. Pulling GP3 to ground will reset the MCU.
 
@@ -89,7 +89,7 @@ The PIC is not connected to the mosfet by default. To connect the PIC with
 the mosfet, you have to add a connection from one of the IO-pins of the PIC
 (J9) to J5 and also close J4 with a jumper.
 
-When the gate of the mosfet is high, 5V will be at pin 2 of the mosfet. This
+When the gate of the mosfet is low, 5V will be at pin 2 of the mosfet. This
 is connected to the connector J3 (to provide power to an external device), and
 via jumper J1 with pins 2/4 of of the Pi. Depending on your usage-scenario,
 you might not need the connector J3 at all.
@@ -108,4 +108,5 @@ external signal.
 
 For flashing, you need a PICkit2-programmer, available for a few bucks from
 ebay. You can flash from Linux/Raspbian with the program `pk2cmd`. The hat
-has a connector for the ISCP-programmer.
+has a connector for the ICSP-programmer. You should remove the jumper-shim
+on J1 (connection to Pi) during programming.
