@@ -83,6 +83,24 @@ is available e.g. from Adafruit. It looks like a normal barrel-jack adapter
 but has smaller pins so you can use it directly on a breadboard.
 
 
+Part-List
+---------
+
+|Part                | Value           | Number | Remark           |
+|--------------------|-----------------|--------|------------------|
+|C1                  | 100nF/50V       | 1      | Z5U-5            |
+|D1                  | BAT85           | 1      | Shottky          |
+|J1,J4,J5,J7-J10,J22 | SL 1x40G 2,54mm | 1.5    | vertical         |
+|J2,J3               | AKL381-2        | 2      | male, horizontal |
+|J6                  | CUI_PJ_102AH    | 1      | Adafruit         |
+|P1                  | BL 2x20G 2,54mm | 1      | vertical         |
+|Q1                  | IRF4905         | 1      | TO-220AB         |
+|R1                  | 10k 1/4W        | 1      | DIN 0207         |
+|R2,R3,R5,R6         | 1k 1/4W         | 4      |                  |
+|R4                  | 22k 1/4W        | 1      |                  |
+|U1                  | PIC12F675-IP    | 1      | + DIL-8 socket   |
+
+
 Wiring
 ------
 
