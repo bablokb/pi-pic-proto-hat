@@ -1,5 +1,5 @@
-The Pi-PIC-Proto-Hat
-====================
+The Pi-PIC-Proto-Hat V1
+=======================
 
 Overview
 --------
