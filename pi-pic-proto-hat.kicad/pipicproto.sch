@@ -5,11 +5,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-02-17"
-Rev "F"
+Date "2020-06-22"
+Rev "2.01"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
-Comment2 ""
+Comment2 "V2"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -483,127 +483,6 @@ F 3 "" H 9300 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x13_Male J17
-U 1 1 5E368E30
-P 2800 5400
-F 0 "J17" H 2908 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 2908 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 2800 5400 50  0001 C CNN
-F 3 "~" H 2800 5400 50  0001 C CNN
-	1    2800 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J16
-U 1 1 5E36CBE9
-P 2500 5400
-F 0 "J16" H 2608 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 2608 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 2500 5400 50  0001 C CNN
-F 3 "~" H 2500 5400 50  0001 C CNN
-	1    2500 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J15
-U 1 1 5E36D569
-P 2200 5400
-F 0 "J15" H 2308 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 2308 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 2200 5400 50  0001 C CNN
-F 3 "~" H 2200 5400 50  0001 C CNN
-	1    2200 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J14
-U 1 1 5E36DD0F
-P 1900 5400
-F 0 "J14" H 2008 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 2008 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 1900 5400 50  0001 C CNN
-F 3 "~" H 1900 5400 50  0001 C CNN
-	1    1900 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J13
-U 1 1 5E36E620
-P 1600 5400
-F 0 "J13" H 1708 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 1708 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 1600 5400 50  0001 C CNN
-F 3 "~" H 1600 5400 50  0001 C CNN
-	1    1600 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J12
-U 1 1 5E36EF8A
-P 1300 5400
-F 0 "J12" H 1408 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 1408 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 1300 5400 50  0001 C CNN
-F 3 "~" H 1300 5400 50  0001 C CNN
-	1    1300 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J11
-U 1 1 5E36F943
-P 1000 5400
-F 0 "J11" H 1108 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 1108 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 1000 5400 50  0001 C CNN
-F 3 "~" H 1000 5400 50  0001 C CNN
-	1    1000 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J18
-U 1 1 5E370695
-P 3100 5400
-F 0 "J18" H 3208 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 3208 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 3100 5400 50  0001 C CNN
-F 3 "~" H 3100 5400 50  0001 C CNN
-	1    3100 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J19
-U 1 1 5E3710F6
-P 3400 5400
-F 0 "J19" H 3508 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 3508 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 3400 5400 50  0001 C CNN
-F 3 "~" H 3400 5400 50  0001 C CNN
-	1    3400 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J20
-U 1 1 5E374736
-P 3700 5400
-F 0 "J20" H 3808 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 3808 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 3700 5400 50  0001 C CNN
-F 3 "~" H 3700 5400 50  0001 C CNN
-	1    3700 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x13_Male J21
-U 1 1 5E375244
-P 4000 5400
-F 0 "J21" H 4108 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 4108 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 4000 5400 50  0001 C CNN
-F 3 "~" H 4000 5400 50  0001 C CNN
-	1    4000 5400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x13_Male J10
 U 1 1 5E375C8A
 P 700 5400
@@ -869,12 +748,6 @@ Wire Wire Line
 	9200 4600 9200 4300
 Wire Wire Line
 	9200 4300 10000 4300
-Wire Wire Line
-	9050 4700 9050 4200
-Wire Wire Line
-	9050 4200 10000 4200
-Wire Wire Line
-	8600 4700 9050 4700
 Text Notes 9850 4950 0    50   ~ 0
 PIC_GPIO
 Text Label 9700 4200 0    50   ~ 0
@@ -926,21 +799,6 @@ Text Label 5700 4300 0    50   ~ 0
 Vdd
 Wire Wire Line
 	8600 4500 8750 4500
-$Comp
-L Connector:Conn_01x02_Male J5
-U 1 1 5E38EB44
-P 8500 2400
-F 0 "J5" V 8562 2444 50  0000 L CNN
-F 1 "Conn_01x02_Male" V 8750 2150 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8500 2400 50  0001 C CNN
-F 3 "~" H 8500 2400 50  0001 C CNN
-	1    8500 2400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7600 2600 7300 2600
-Wire Wire Line
-	7300 2600 7300 2400
 Wire Wire Line
 	7300 2100 7300 1800
 Wire Wire Line
@@ -1020,141 +878,11 @@ NoConn ~ 4200 5700
 NoConn ~ 4200 5800
 NoConn ~ 4200 5900
 NoConn ~ 4200 6000
-NoConn ~ 1200 4800
-NoConn ~ 1200 4900
-NoConn ~ 1200 5000
-NoConn ~ 1200 5100
-NoConn ~ 1200 5200
-NoConn ~ 1200 5300
-NoConn ~ 1200 5400
-NoConn ~ 1200 5500
-NoConn ~ 1200 5600
-NoConn ~ 1200 5700
-NoConn ~ 1200 5800
-NoConn ~ 1200 5900
-NoConn ~ 1200 6000
 Wire Wire Line
 	8000 5200 8000 5400
 Wire Wire Line
 	8000 4000 8000 3600
 Connection ~ 8000 4000
-NoConn ~ 1500 4800
-NoConn ~ 1500 4900
-NoConn ~ 1500 5000
-NoConn ~ 1500 5100
-NoConn ~ 1500 5200
-NoConn ~ 1500 5300
-NoConn ~ 1500 5400
-NoConn ~ 1500 5500
-NoConn ~ 1500 5600
-NoConn ~ 1500 5700
-NoConn ~ 1500 5800
-NoConn ~ 1500 5900
-NoConn ~ 1500 6000
-NoConn ~ 1800 6000
-NoConn ~ 1800 5900
-NoConn ~ 1800 5800
-NoConn ~ 1800 5700
-NoConn ~ 1800 5600
-NoConn ~ 1800 5500
-NoConn ~ 1800 5400
-NoConn ~ 1800 5300
-NoConn ~ 1800 5200
-NoConn ~ 1800 5100
-NoConn ~ 1800 5000
-NoConn ~ 1800 4900
-NoConn ~ 1800 4800
-NoConn ~ 2100 4800
-NoConn ~ 2100 4900
-NoConn ~ 2100 5000
-NoConn ~ 2100 5100
-NoConn ~ 2100 5200
-NoConn ~ 2100 5300
-NoConn ~ 2100 5400
-NoConn ~ 2100 5500
-NoConn ~ 2100 5600
-NoConn ~ 2100 5700
-NoConn ~ 2100 5800
-NoConn ~ 2100 5900
-NoConn ~ 2100 6000
-NoConn ~ 2400 4800
-NoConn ~ 2400 4900
-NoConn ~ 2400 5000
-NoConn ~ 2400 5100
-NoConn ~ 2400 5200
-NoConn ~ 2400 5300
-NoConn ~ 2400 5400
-NoConn ~ 2400 5500
-NoConn ~ 2400 5600
-NoConn ~ 2400 5700
-NoConn ~ 2400 5800
-NoConn ~ 2400 5900
-NoConn ~ 2400 6000
-NoConn ~ 2700 4800
-NoConn ~ 2700 4900
-NoConn ~ 2700 5000
-NoConn ~ 2700 5100
-NoConn ~ 2700 5200
-NoConn ~ 2700 5300
-NoConn ~ 2700 5400
-NoConn ~ 2700 5500
-NoConn ~ 2700 5600
-NoConn ~ 2700 5700
-NoConn ~ 2700 5800
-NoConn ~ 2700 5900
-NoConn ~ 2700 6000
-NoConn ~ 3000 4800
-NoConn ~ 3000 4900
-NoConn ~ 3000 5000
-NoConn ~ 3000 5100
-NoConn ~ 3000 5200
-NoConn ~ 3000 5300
-NoConn ~ 3000 5400
-NoConn ~ 3000 5500
-NoConn ~ 3000 5600
-NoConn ~ 3000 5700
-NoConn ~ 3000 5800
-NoConn ~ 3000 5900
-NoConn ~ 3000 6000
-NoConn ~ 3300 4800
-NoConn ~ 3300 4900
-NoConn ~ 3300 5000
-NoConn ~ 3300 5100
-NoConn ~ 3300 5200
-NoConn ~ 3300 5300
-NoConn ~ 3300 5400
-NoConn ~ 3300 5500
-NoConn ~ 3300 5600
-NoConn ~ 3300 5700
-NoConn ~ 3300 5800
-NoConn ~ 3300 5900
-NoConn ~ 3300 6000
-NoConn ~ 3600 4800
-NoConn ~ 3600 4900
-NoConn ~ 3600 5000
-NoConn ~ 3600 5100
-NoConn ~ 3600 5200
-NoConn ~ 3600 5300
-NoConn ~ 3600 5400
-NoConn ~ 3600 5500
-NoConn ~ 3600 5600
-NoConn ~ 3600 5700
-NoConn ~ 3600 5800
-NoConn ~ 3600 5900
-NoConn ~ 3600 6000
-NoConn ~ 3900 4800
-NoConn ~ 3900 4900
-NoConn ~ 3900 5000
-NoConn ~ 3900 5100
-NoConn ~ 3900 5200
-NoConn ~ 3900 5300
-NoConn ~ 3900 5400
-NoConn ~ 3900 5500
-NoConn ~ 3900 5600
-NoConn ~ 3900 5700
-NoConn ~ 3900 5800
-NoConn ~ 3900 5900
-NoConn ~ 3900 6000
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5E605EFF
@@ -1287,17 +1015,6 @@ F 3 "~" H 5550 2410 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J4
-U 1 1 5E41EF6B
-P 7700 2400
-F 0 "J4" V 7762 2444 50  0000 L CNN
-F 1 "Conn_01x02_Male" V 7950 2100 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7700 2400 50  0001 C CNN
-F 3 "~" H 7700 2400 50  0001 C CNN
-	1    7700 2400
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:Conn_01x02_Male J1
 U 1 1 5E41F5B6
 P 5400 700
@@ -1322,11 +1039,6 @@ Wire Wire Line
 Connection ~ 7750 1500
 Wire Wire Line
 	7750 1500 9500 1500
-Wire Wire Line
-	7700 2600 8400 2600
-Wire Wire Line
-	8400 2600 8500 2600
-Connection ~ 8400 2600
 $Comp
 L Connector:Conn_01x13_Male J22
 U 1 1 5E376781
@@ -1390,4 +1102,11 @@ Text Notes 5200 850  2    50   ~ 0
 5V to Pi\nPin 2/4
 Text Notes 7850 1450 0    50   ~ 0
 5V to ext.\nconnector J3 \n
+NoConn ~ 10000 4200
+Wire Wire Line
+	8600 4700 8950 4700
+Wire Wire Line
+	8950 4700 8950 2400
+Wire Wire Line
+	8950 2400 7300 2400
 $EndSCHEMATC
