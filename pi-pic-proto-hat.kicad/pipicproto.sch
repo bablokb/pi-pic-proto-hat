@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
 Date "2020-06-22"
-Rev "2.02"
+Rev "2.03"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -362,39 +362,6 @@ F 3 "~" H 9200 4250 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:D_Schottky D1
-U 1 1 5E304BE1
-P 6400 3600
-F 0 "D1" H 6400 3816 50  0000 C CNN
-F 1 "D_Schottky" H 6400 3725 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 6400 3600 50  0001 C CNN
-F 3 "~" H 6400 3600 50  0001 C CNN
-	1    6400 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5E3051FC
-P 5750 3600
-F 0 "R4" V 5950 3600 50  0000 L CNN
-F 1 "22k" V 5850 3550 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5680 3600 50  0001 C CNN
-F 3 "~" H 5750 3600 50  0001 C CNN
-	1    5750 3600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Switch:SW_Push SW1
-U 1 1 5E30C057
-P 6400 3200
-F 0 "SW1" H 6400 3485 50  0000 C CNN
-F 1 "SW_Push" H 6400 3394 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 6400 3400 50  0001 C CNN
-F 3 "~" H 6400 3400 50  0001 C CNN
-	1    6400 3200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R6
 U 1 1 5E3133D0
 P 6800 5000
@@ -447,17 +414,6 @@ F 1 "GND" V 6005 4272 50  0000 R CNN
 F 2 "" H 6000 4400 50  0001 C CNN
 F 3 "" H 6000 4400 50  0001 C CNN
 	1    6000 4400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR09
-U 1 1 5E340737
-P 6800 3200
-F 0 "#PWR09" H 6800 2950 50  0001 C CNN
-F 1 "GND" V 6805 3072 50  0000 R CNN
-F 2 "" H 6800 3200 50  0001 C CNN
-F 3 "" H 6800 3200 50  0001 C CNN
-	1    6800 3200
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -686,34 +642,6 @@ Wire Wire Line
 	8750 4500 8750 3750
 Wire Wire Line
 	5600 3750 5600 4200
-$Comp
-L Device:R R3
-U 1 1 5E3838F5
-P 5750 3200
-F 0 "R3" V 5950 3150 50  0000 L CNN
-F 1 "1k" V 5850 3150 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5680 3200 50  0001 C CNN
-F 3 "~" H 5750 3200 50  0001 C CNN
-	1    5750 3200
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5600 3600 5600 3750
-Connection ~ 5600 3750
-Wire Wire Line
-	5600 3200 5600 3600
-Connection ~ 5600 3600
-Wire Wire Line
-	5900 3200 6200 3200
-Wire Wire Line
-	6600 3200 6800 3200
-Wire Wire Line
-	5900 3600 6250 3600
-Wire Wire Line
-	6550 3600 7250 3600
-Wire Wire Line
-	7250 3600 7250 4000
-Connection ~ 7250 4000
 Wire Wire Line
 	8750 3750 5600 3750
 Wire Wire Line
@@ -1062,7 +990,7 @@ U 1 1 5EF5E7F1
 P 5850 5650
 F 0 "R7" V 5643 5650 50  0000 C CNN
 F 1 "6.2k" V 5734 5650 50  0000 C CNN
-F 2 "" V 5780 5650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5780 5650 50  0001 C CNN
 F 3 "~" H 5850 5650 50  0001 C CNN
 	1    5850 5650
 	0    1    1    0   
@@ -1073,7 +1001,7 @@ U 1 1 5EF5EC98
 P 5500 6000
 F 0 "R8" H 5570 6046 50  0000 L CNN
 F 1 "12k" H 5570 5955 50  0000 L CNN
-F 2 "" V 5430 6000 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5430 6000 50  0001 C CNN
 F 3 "~" H 5500 6000 50  0001 C CNN
 	1    5500 6000
 	1    0    0    -1  
