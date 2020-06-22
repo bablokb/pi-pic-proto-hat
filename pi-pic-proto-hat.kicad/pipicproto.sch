@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
 Date "2020-06-22"
-Rev "2.01"
+Rev "2.02"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -187,9 +187,9 @@ GPIO12(PWM0)
 Text Label 3950 2400 2    50   ~ 0
 ID_SC
 Text Label 3950 2300 2    50   ~ 0
-GPIO7(SPI1_CE_N)
+GPIO7(SPI0_CE_1)
 Text Label 3950 2200 2    50   ~ 0
-GPIO8(SPI0_CE_N)
+GPIO8(SPI0_CE_0)
 Text Label 3950 2100 2    50   ~ 0
 GPIO25(GEN6)
 Text Label 3950 1900 2    50   ~ 0
@@ -351,15 +351,15 @@ F 3 "~" H 5400 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x06_Male J9
+L Connector:Conn_01x02_Male J9
 U 1 1 5E2FB733
-P 10200 4500
-F 0 "J9" H 10150 4000 50  0000 R CNN
-F 1 "Conn_01x06_Male" H 10400 4100 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 10200 4500 50  0001 C CNN
-F 3 "~" H 10200 4500 50  0001 C CNN
-	1    10200 4500
-	-1   0    0    1   
+P 9200 4250
+F 0 "J9" V 9250 4000 50  0000 R CNN
+F 1 "Conn_01x02_Male" V 9350 4000 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9200 4250 50  0001 C CNN
+F 3 "~" H 9200 4250 50  0001 C CNN
+	1    9200 4250
+	0    -1   1    0   
 $EndComp
 $Comp
 L Device:D_Schottky D1
@@ -507,12 +507,12 @@ $EndComp
 $Comp
 L power:+5V #PWR015
 U 1 1 5E38E7EF
-P 4500 4500
-F 0 "#PWR015" H 4500 4350 50  0001 C CNN
-F 1 "+5V" H 4515 4673 50  0000 C CNN
-F 2 "" H 4500 4500 50  0001 C CNN
-F 3 "" H 4500 4500 50  0001 C CNN
-	1    4500 4500
+P 1450 4950
+F 0 "#PWR015" H 1450 4800 50  0001 C CNN
+F 1 "+5V" H 1465 5123 50  0000 C CNN
+F 2 "" H 1450 4950 50  0001 C CNN
+F 3 "" H 1450 4950 50  0001 C CNN
+	1    1450 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -635,9 +635,9 @@ GPIO9(SPI0_MISO)
 Text Label 3500 4500 1    50   ~ 0
 GPIO11(SPI0_SCK)
 Text Label 3600 4500 1    50   ~ 0
-GPIO8(SPI0_CE_N)
+GPIO8(SPI0_CE_0)
 Text Label 3700 4500 1    50   ~ 0
-GPIO7(SPI1_CE_N)
+GPIO7(SPI0_CE_1)
 $Comp
 L power:+5VP #PWR03
 U 1 1 5E3C4C39
@@ -661,40 +661,14 @@ F 3 "" H 8000 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10000 4700 9650 4700
-Wire Wire Line
-	9650 4700 9650 6250
-Wire Wire Line
-	9650 6250 6400 6250
-Wire Wire Line
-	6400 6250 6400 5150
-Wire Wire Line
-	10000 4600 9500 4600
-Wire Wire Line
-	9500 4600 9500 6000
-Wire Wire Line
-	9500 6000 6800 6000
-Wire Wire Line
-	6800 6000 6800 5150
-Wire Wire Line
-	10000 4500 9350 4500
-Wire Wire Line
-	9350 4500 9350 5750
-Wire Wire Line
-	9350 5750 7250 5750
-Wire Wire Line
 	7250 5750 7250 4700
 Wire Wire Line
 	7250 4700 7400 4700
 Wire Wire Line
 	7400 4500 6400 4500
 Wire Wire Line
-	7400 4600 6800 4600
-Wire Wire Line
 	6400 4850 6400 4500
 Connection ~ 6400 4500
-Wire Wire Line
-	6400 4500 5600 4500
 Wire Wire Line
 	6800 4850 6800 4600
 Connection ~ 6800 4600
@@ -744,23 +718,8 @@ Wire Wire Line
 	8750 3750 5600 3750
 Wire Wire Line
 	8600 4600 9200 4600
-Wire Wire Line
-	9200 4600 9200 4300
-Wire Wire Line
-	9200 4300 10000 4300
-Text Notes 9850 4950 0    50   ~ 0
+Text Notes 9150 3900 0    50   ~ 0
 PIC_GPIO
-Text Label 9700 4200 0    50   ~ 0
-IO5
-Text Label 9700 4300 0    50   ~ 0
-IO4
-Text Label 9700 4500 0    50   ~ 0
-IO2
-Text Label 9700 4600 0    50   ~ 0
-IO1
-Text Label 9700 4700 0    50   ~ 0
-IO0
-NoConn ~ 10000 4400
 NoConn ~ 5600 4700
 Text Notes 5400 4850 0    50   ~ 0
 ISCP
@@ -818,7 +777,6 @@ Wire Wire Line
 	9300 1600 9300 1800
 NoConn ~ 3950 2400
 NoConn ~ 3950 2600
-NoConn ~ 3950 2800
 NoConn ~ 3950 2900
 NoConn ~ 3950 3000
 NoConn ~ 1250 2400
@@ -826,7 +784,6 @@ NoConn ~ 1250 2500
 NoConn ~ 1250 2600
 NoConn ~ 1250 2700
 NoConn ~ 1250 2800
-NoConn ~ 1250 2900
 Wire Wire Line
 	900  4800 900  4900
 Wire Wire Line
@@ -865,19 +822,6 @@ Wire Wire Line
 Connection ~ 900  6000
 Wire Wire Line
 	900  6000 900  6200
-NoConn ~ 4200 4800
-NoConn ~ 4200 4900
-NoConn ~ 4200 5000
-NoConn ~ 4200 5100
-NoConn ~ 4200 5200
-NoConn ~ 4200 5300
-NoConn ~ 4200 5400
-NoConn ~ 4200 5500
-NoConn ~ 4200 5600
-NoConn ~ 4200 5700
-NoConn ~ 4200 5800
-NoConn ~ 4200 5900
-NoConn ~ 4200 6000
 Wire Wire Line
 	8000 5200 8000 5400
 Wire Wire Line
@@ -1042,71 +986,140 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x13_Male J22
 U 1 1 5E376781
-P 4300 5400
-F 0 "J22" H 4408 6089 50  0000 C CNN
-F 1 "Conn_01x13_Male" H 4408 6090 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 4300 5400 50  0001 C CNN
-F 3 "~" H 4300 5400 50  0001 C CNN
-	1    4300 5400
+P 1250 5850
+F 0 "J22" H 1358 6539 50  0000 C CNN
+F 1 "Conn_01x13_Male" H 1358 6540 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical" H 1250 5850 50  0001 C CNN
+F 3 "~" H 1250 5850 50  0001 C CNN
+	1    1250 5850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 4500 4500 4800
-Connection ~ 4500 4800
+	1450 4950 1450 5250
+Connection ~ 1450 5250
 Wire Wire Line
-	4500 4800 4500 4900
-Connection ~ 4500 4900
+	1450 5250 1450 5350
+Connection ~ 1450 5350
 Wire Wire Line
-	4500 4900 4500 5000
-Connection ~ 4500 5000
+	1450 5350 1450 5450
+Connection ~ 1450 5450
 Wire Wire Line
-	4500 5000 4500 5100
-Connection ~ 4500 5100
+	1450 5450 1450 5550
+Connection ~ 1450 5550
 Wire Wire Line
-	4500 5100 4500 5200
-Connection ~ 4500 5200
+	1450 5550 1450 5650
+Connection ~ 1450 5650
 Wire Wire Line
-	4500 5200 4500 5300
-NoConn ~ 4500 5400
+	1450 5650 1450 5750
+NoConn ~ 1450 5850
 $Comp
 L power:+3.3V #PWR0101
 U 1 1 5E48C144
-P 4750 4500
-F 0 "#PWR0101" H 4750 4350 50  0001 C CNN
-F 1 "+3.3V" H 4765 4673 50  0000 C CNN
-F 2 "" H 4750 4500 50  0001 C CNN
-F 3 "" H 4750 4500 50  0001 C CNN
-	1    4750 4500
+P 1700 4950
+F 0 "#PWR0101" H 1700 4800 50  0001 C CNN
+F 1 "+3.3V" H 1715 5123 50  0000 C CNN
+F 2 "" H 1700 4950 50  0001 C CNN
+F 3 "" H 1700 4950 50  0001 C CNN
+	1    1700 4950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 6000 4500 5900
-Connection ~ 4500 5600
+	1450 6450 1450 6350
+Connection ~ 1450 6050
 Wire Wire Line
-	4500 5600 4500 5500
-Connection ~ 4500 5700
+	1450 6050 1450 5950
+Connection ~ 1450 6150
 Wire Wire Line
-	4500 5700 4500 5600
-Connection ~ 4500 5800
+	1450 6150 1450 6050
+Connection ~ 1450 6250
 Wire Wire Line
-	4500 5800 4500 5700
-Connection ~ 4500 5900
+	1450 6250 1450 6150
+Connection ~ 1450 6350
 Wire Wire Line
-	4500 5900 4500 5800
+	1450 6350 1450 6250
 Wire Wire Line
-	4750 4500 4750 5500
+	1700 4950 1700 5950
 Wire Wire Line
-	4750 5500 4500 5500
-Connection ~ 4500 5500
+	1700 5950 1450 5950
+Connection ~ 1450 5950
 Text Notes 5200 850  2    50   ~ 0
 5V to Pi\nPin 2/4
 Text Notes 7850 1450 0    50   ~ 0
 5V to ext.\nconnector J3 \n
-NoConn ~ 10000 4200
 Wire Wire Line
 	8600 4700 8950 4700
 Wire Wire Line
 	8950 4700 8950 2400
 Wire Wire Line
 	8950 2400 7300 2400
+Text Label 5850 5300 2    50   ~ 0
+GPIO16
+Text Label 5250 5650 2    50   ~ 0
+GPIO26
+$Comp
+L Device:R R7
+U 1 1 5EF5E7F1
+P 5850 5650
+F 0 "R7" V 5643 5650 50  0000 C CNN
+F 1 "6.2k" V 5734 5650 50  0000 C CNN
+F 2 "" V 5780 5650 50  0001 C CNN
+F 3 "~" H 5850 5650 50  0001 C CNN
+	1    5850 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5EF5EC98
+P 5500 6000
+F 0 "R8" H 5570 6046 50  0000 L CNN
+F 1 "12k" H 5570 5955 50  0000 L CNN
+F 2 "" V 5430 6000 50  0001 C CNN
+F 3 "~" H 5500 6000 50  0001 C CNN
+	1    5500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5EF66E1A
+P 5500 6150
+F 0 "#PWR0102" H 5500 5900 50  0001 C CNN
+F 1 "GND" H 5505 5977 50  0000 C CNN
+F 2 "" H 5500 6150 50  0001 C CNN
+F 3 "" H 5500 6150 50  0001 C CNN
+	1    5500 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5650 5500 5650
+Wire Wire Line
+	5500 5850 5500 5650
+Connection ~ 5500 5650
+Wire Wire Line
+	5500 5650 5250 5650
+Text Notes 5100 5200 0    50   ~ 0
+Pi->PIC (gpio-poweroff)
+Text Notes 4450 5550 0    50   ~ 0
+PIC->Pi (gpio-shutdown)
+Wire Wire Line
+	5600 4500 6400 4500
+Wire Wire Line
+	6400 5150 6400 5300
+Wire Wire Line
+	5850 5300 6400 5300
+Wire Wire Line
+	6800 4600 7400 4600
+Wire Wire Line
+	6800 5150 6800 5650
+Wire Wire Line
+	6800 5650 6000 5650
+Wire Wire Line
+	9200 4600 9200 4450
+Wire Wire Line
+	7250 5750 9300 5750
+Wire Wire Line
+	9300 5750 9300 4450
+Text Notes 9200 4150 1    50   ~ 0
+GP4
+Text Notes 9350 4150 1    50   ~ 0
+GP2
 $EndSCHEMATC
