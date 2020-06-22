@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
 Date "2020-06-22"
-Rev "2.03"
+Rev "2.04"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -595,25 +595,14 @@ GPIO8(SPI0_CE_0)
 Text Label 3700 4500 1    50   ~ 0
 GPIO7(SPI0_CE_1)
 $Comp
-L power:+5VP #PWR03
-U 1 1 5E3C4C39
-P 6000 1250
-F 0 "#PWR03" H 6000 1100 50  0001 C CNN
-F 1 "+5VP" H 6015 1423 50  0000 C CNN
-F 2 "" H 6000 1250 50  0001 C CNN
-F 3 "" H 6000 1250 50  0001 C CNN
-	1    6000 1250
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5VP #PWR010
 U 1 1 5E3C6A1E
-P 8000 3600
-F 0 "#PWR010" H 8000 3450 50  0001 C CNN
-F 1 "+5VP" H 8015 3773 50  0000 C CNN
-F 2 "" H 8000 3600 50  0001 C CNN
-F 3 "" H 8000 3600 50  0001 C CNN
-	1    8000 3600
+P 6550 4300
+F 0 "#PWR010" H 6550 4150 50  0001 C CNN
+F 1 "+5VP" H 6565 4473 50  0000 C CNN
+F 2 "" H 6550 4300 50  0001 C CNN
+F 3 "" H 6550 4300 50  0001 C CNN
+	1    6550 4300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -633,7 +622,7 @@ Wire Wire Line
 Wire Wire Line
 	5600 4400 6000 4400
 Wire Wire Line
-	5600 4300 7250 4300
+	5600 4300 6550 4300
 Wire Wire Line
 	7250 4300 7250 4000
 Wire Wire Line
@@ -642,8 +631,6 @@ Wire Wire Line
 	8750 4500 8750 3750
 Wire Wire Line
 	5600 3750 5600 4200
-Wire Wire Line
-	8750 3750 5600 3750
 Wire Wire Line
 	8600 4600 9200 4600
 Text Notes 9150 3900 0    50   ~ 0
@@ -694,7 +681,7 @@ Connection ~ 7300 1800
 Wire Wire Line
 	7100 1500 6750 1500
 Wire Wire Line
-	6750 1500 6000 1500
+	6750 1500 6500 1500
 Connection ~ 6750 1500
 Wire Wire Line
 	6000 1250 6000 1500
@@ -752,18 +739,15 @@ Wire Wire Line
 	900  6000 900  6200
 Wire Wire Line
 	8000 5200 8000 5400
-Wire Wire Line
-	8000 4000 8000 3600
-Connection ~ 8000 4000
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5E605EFF
-P 4750 6850
-F 0 "#FLG01" H 4750 6925 50  0001 C CNN
-F 1 "PWR_FLAG" H 4750 7023 50  0000 C CNN
-F 2 "" H 4750 6850 50  0001 C CNN
-F 3 "~" H 4750 6850 50  0001 C CNN
-	1    4750 6850
+P 4300 6850
+F 0 "#FLG01" H 4300 6925 50  0001 C CNN
+F 1 "PWR_FLAG" H 4300 7023 50  0000 C CNN
+F 2 "" H 4300 6850 50  0001 C CNN
+F 3 "~" H 4300 6850 50  0001 C CNN
+	1    4300 6850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -802,20 +786,20 @@ $EndComp
 $Comp
 L power:+3.3V #PWR018
 U 1 1 5E6081FA
-P 4750 7100
-F 0 "#PWR018" H 4750 6950 50  0001 C CNN
-F 1 "+3.3V" H 4765 7273 50  0000 C CNN
-F 2 "" H 4750 7100 50  0001 C CNN
-F 3 "" H 4750 7100 50  0001 C CNN
-	1    4750 7100
+P 4300 7100
+F 0 "#PWR018" H 4300 6950 50  0001 C CNN
+F 1 "+3.3V" H 4315 7273 50  0000 C CNN
+F 2 "" H 4300 7100 50  0001 C CNN
+F 3 "" H 4300 7100 50  0001 C CNN
+	1    4300 7100
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+5V #PWR019
+L power:+5P #PWR019
 U 1 1 5E617B7B
 P 5250 7100
 F 0 "#PWR019" H 5250 6950 50  0001 C CNN
-F 1 "+5V" H 5265 7273 50  0000 C CNN
+F 1 "+5P" H 5265 7273 50  0000 C CNN
 F 2 "" H 5250 7100 50  0001 C CNN
 F 3 "" H 5250 7100 50  0001 C CNN
 	1    5250 7100
@@ -850,62 +834,54 @@ Wire Wire Line
 Wire Wire Line
 	5250 6850 5250 7100
 Wire Wire Line
-	4750 6850 4750 7100
+	4300 6850 4300 7100
 $Comp
 L power:GND #PWR06
 U 1 1 5E422B40
-P 6000 2550
-F 0 "#PWR06" H 6000 2300 50  0001 C CNN
-F 1 "GND" H 6005 2377 50  0000 C CNN
-F 2 "" H 6000 2550 50  0001 C CNN
-F 3 "" H 6000 2550 50  0001 C CNN
-	1    6000 2550
+P 6450 3400
+F 0 "#PWR06" H 6450 3150 50  0001 C CNN
+F 1 "GND" H 6455 3227 50  0000 C CNN
+F 2 "" H 6450 3400 50  0001 C CNN
+F 3 "" H 6450 3400 50  0001 C CNN
+	1    6450 3400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6000 2550 5800 2550
-NoConn ~ 5800 2450
+	6450 3400 6250 3400
+NoConn ~ 6250 3300
 Wire Wire Line
 	5500 1500 6000 1500
 Wire Wire Line
 	5500 1600 5700 1600
 Wire Wire Line
 	5700 1600 5700 1700
-Wire Wire Line
-	5800 2350 6000 2350
-Wire Wire Line
-	6000 2350 6000 1500
 $Comp
 L Connector:Barrel_Jack_Switch J6
 U 1 1 5E3F667C
-P 5500 2450
-F 0 "J6" H 5557 2767 50  0000 C CNN
-F 1 "Barrel_Jack_Switch" H 5557 2676 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 5550 2410 50  0001 C CNN
-F 3 "~" H 5550 2410 50  0001 C CNN
-	1    5500 2450
+P 5950 3300
+F 0 "J6" H 6007 3617 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 6007 3526 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 6000 3260 50  0001 C CNN
+F 3 "~" H 6000 3260 50  0001 C CNN
+	1    5950 3300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x02_Male J1
 U 1 1 5E41F5B6
-P 5400 700
-F 0 "J1" V 5462 744 50  0000 L CNN
-F 1 "Conn_01x02_Male" V 5553 744 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5400 700 50  0001 C CNN
-F 3 "~" H 5400 700 50  0001 C CNN
-	1    5400 700 
-	0    1    1    0   
+P 6700 3400
+F 0 "J1" H 7000 3450 50  0000 L CNN
+F 1 "RUN/~PGM~" H 7000 3350 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6700 3400 50  0001 C CNN
+F 3 "~" H 6700 3400 50  0001 C CNN
+	1    6700 3400
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5300 900  3250 900 
 Connection ~ 3250 900 
 Wire Wire Line
 	3250 900  3250 1100
 Wire Wire Line
 	7500 1500 7750 1500
-Wire Wire Line
-	5400 900  7750 900 
 Wire Wire Line
 	7750 900  7750 1500
 Connection ~ 7750 1500
@@ -970,8 +946,6 @@ Wire Wire Line
 Wire Wire Line
 	1700 5950 1450 5950
 Connection ~ 1450 5950
-Text Notes 5200 850  2    50   ~ 0
-5V to Pi\nPin 2/4
 Text Notes 7850 1450 0    50   ~ 0
 5V to ext.\nconnector J3 \n
 Wire Wire Line
@@ -1050,4 +1024,77 @@ Text Notes 9200 4150 1    50   ~ 0
 GP4
 Text Notes 9350 4150 1    50   ~ 0
 GP2
+Connection ~ 6900 4300
+Wire Wire Line
+	6900 4300 7250 4300
+Wire Wire Line
+	6900 3400 6900 3200
+Wire Wire Line
+	3250 900  7750 900 
+Connection ~ 6550 4300
+Wire Wire Line
+	6550 4300 6900 4300
+Wire Wire Line
+	6250 3200 6500 3200
+Wire Wire Line
+	6500 3200 6500 1500
+Connection ~ 6500 3200
+Wire Wire Line
+	6500 3200 6900 3200
+Connection ~ 6500 1500
+Wire Wire Line
+	6500 1500 6000 1500
+Wire Wire Line
+	6900 3500 6900 4300
+Wire Wire Line
+	5600 3750 5900 3750
+$Comp
+L power:+5P #PWR0103
+U 1 1 5F0543B9
+P 6000 1250
+F 0 "#PWR0103" H 6000 1100 50  0001 C CNN
+F 1 "+5P" H 6000 1390 50  0000 C CNN
+F 2 "" H 6000 1250 50  0000 C CNN
+F 3 "" H 6000 1250 50  0000 C CNN
+	1    6000 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F05503B
+P 5900 3750
+F 0 "#FLG0101" H 5900 3825 50  0001 C CNN
+F 1 "PWR_FLAG" H 5900 3923 50  0000 C CNN
+F 2 "" H 5900 3750 50  0001 C CNN
+F 3 "~" H 5900 3750 50  0001 C CNN
+	1    5900 3750
+	-1   0    0    1   
+$EndComp
+Connection ~ 5900 3750
+Wire Wire Line
+	5900 3750 8750 3750
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5F06C550
+P 4800 6850
+F 0 "#FLG0102" H 4800 6925 50  0001 C CNN
+F 1 "PWR_FLAG" H 4800 7023 50  0000 C CNN
+F 2 "" H 4800 6850 50  0001 C CNN
+F 3 "~" H 4800 6850 50  0001 C CNN
+	1    4800 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 5F06C55A
+P 4800 7100
+F 0 "#PWR0104" H 4800 6950 50  0001 C CNN
+F 1 "+5V" H 4815 7273 50  0000 C CNN
+F 2 "" H 4800 7100 50  0001 C CNN
+F 3 "" H 4800 7100 50  0001 C CNN
+	1    4800 7100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4800 6850 4800 7100
 $EndSCHEMATC
