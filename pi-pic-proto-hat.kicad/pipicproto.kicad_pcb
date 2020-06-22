@@ -1698,7 +1698,7 @@
   (gr_text PI (at 203.81 139.205) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text ISCP (at 262.23 129.68) (layer F.SilkS)
+  (gr_text ICSP (at 262.23 129.68) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.1)))
   )
   (gr_text CLK (at 264.135 124.6 90) (layer F.SilkS)
