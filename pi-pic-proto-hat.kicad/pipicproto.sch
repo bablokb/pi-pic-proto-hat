@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-06-22"
-Rev "2.04"
+Date "2020-06-29"
+Rev "2.06"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -362,17 +362,6 @@ F 3 "~" H 9200 4250 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:R R6
-U 1 1 5E3133D0
-P 6800 5000
-F 0 "R6" H 6870 5046 50  0000 L CNN
-F 1 "1k" H 6870 4955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6730 5000 50  0001 C CNN
-F 3 "~" H 6800 5000 50  0001 C CNN
-	1    6800 5000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R5
 U 1 1 5E312AD7
 P 6400 5000
@@ -472,68 +461,36 @@ F 3 "" H 1450 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x20_Male J7
+L Connector:Conn_01x24_Male J7
 U 1 1 5E364D51
 P 2700 3550
 F 0 "J7" V 2535 3478 50  0000 C CNN
-F 1 "Conn_01x20_Male" V 2626 3478 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 2700 3550 50  0001 C CNN
+F 1 "Conn_01x24_Male" V 2626 3478 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x24_P2.54mm_Vertical" H 2700 3550 50  0001 C CNN
 F 3 "~" H 2700 3550 50  0001 C CNN
 	1    2700 3550
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
+	1600 3750 1600 4500
+Wire Wire Line
+	1700 3750 1700 4500
+Wire Wire Line
+	3250 1100 3100 1100
+Text Label 1600 4500 1    50   ~ 0
+GPIO2(SDA1)
+Text Label 1700 4500 1    50   ~ 0
+GPIO3(SCL1)
+Wire Wire Line
+	1800 3750 1800 4500
+Wire Wire Line
+	1900 3750 1900 4500
+Wire Wire Line
+	2000 3750 2000 4500
+Wire Wire Line
 	2100 3750 2100 4500
 Wire Wire Line
 	2200 3750 2200 4500
-$Comp
-L power:+3.3V #PWR012
-U 1 1 5E3732E4
-P 1550 4300
-F 0 "#PWR012" H 1550 4150 50  0001 C CNN
-F 1 "+3.3V" H 1565 4473 50  0000 C CNN
-F 2 "" H 1550 4300 50  0001 C CNN
-F 3 "" H 1550 4300 50  0001 C CNN
-	1    1550 4300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR013
-U 1 1 5E375515
-P 1800 4300
-F 0 "#PWR013" H 1800 4050 50  0001 C CNN
-F 1 "GND" H 1805 4127 50  0000 C CNN
-F 2 "" H 1800 4300 50  0001 C CNN
-F 3 "" H 1800 4300 50  0001 C CNN
-	1    1800 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2000 3750 2000 4250
-Wire Wire Line
-	2000 4250 1800 4250
-Wire Wire Line
-	1800 4250 1800 4300
-Wire Wire Line
-	1900 3750 1900 4000
-Wire Wire Line
-	1900 4000 1550 4000
-Wire Wire Line
-	1550 4000 1550 4300
-Wire Wire Line
-	1800 3750 1000 3750
-Wire Wire Line
-	1000 3750 1000 700 
-Wire Wire Line
-	1000 700  3250 700 
-Wire Wire Line
-	3250 700  3250 900 
-Wire Wire Line
-	3250 1100 3100 1100
-Text Label 2100 4500 1    50   ~ 0
-GPIO2(SDA1)
-Text Label 2200 4500 1    50   ~ 0
-GPIO3(SCL1)
 Wire Wire Line
 	2300 3750 2300 4500
 Wire Wire Line
@@ -554,45 +511,35 @@ Wire Wire Line
 	3100 3750 3100 4500
 Wire Wire Line
 	3200 3750 3200 4500
-Wire Wire Line
-	3300 3750 3300 4500
-Wire Wire Line
-	3400 3750 3400 4500
-Wire Wire Line
-	3500 3750 3500 4500
-Wire Wire Line
-	3600 3750 3600 4500
-Wire Wire Line
-	3700 3750 3700 4500
-Text Label 2300 4500 1    50   ~ 0
+Text Label 1800 4500 1    50   ~ 0
 GPIO4(GCLK)
-Text Label 2400 4500 1    50   ~ 0
+Text Label 1900 4500 1    50   ~ 0
 GPIO14(TXD0)
-Text Label 2500 4500 1    50   ~ 0
+Text Label 2000 4500 1    50   ~ 0
 GPIO15(RXD0)
-Text Label 2600 4500 1    50   ~ 0
+Text Label 2100 4500 1    50   ~ 0
 GPIO17(GEN0)
-Text Label 2700 4500 1    50   ~ 0
+Text Label 2200 4500 1    50   ~ 0
 GPIO18(GEN1)(PWM0)
-Text Label 2800 4500 1    50   ~ 0
+Text Label 2300 4500 1    50   ~ 0
 GPIO27(GEN2)
-Text Label 2900 4500 1    50   ~ 0
+Text Label 2400 4500 1    50   ~ 0
 GPIO22(GEN3)
-Text Label 3000 4500 1    50   ~ 0
+Text Label 2500 4500 1    50   ~ 0
 GPIO23(GEN4)
-Text Label 3100 4500 1    50   ~ 0
+Text Label 2600 4500 1    50   ~ 0
 GPIO24(GEN5)
-Text Label 3200 4500 1    50   ~ 0
+Text Label 2700 4500 1    50   ~ 0
 GPIO25(GEN6)
-Text Label 3300 4500 1    50   ~ 0
+Text Label 2800 4500 1    50   ~ 0
 GPIO10(SPI0_MOSI)
-Text Label 3400 4500 1    50   ~ 0
+Text Label 2900 4500 1    50   ~ 0
 GPIO9(SPI0_MISO)
-Text Label 3500 4500 1    50   ~ 0
+Text Label 3000 4500 1    50   ~ 0
 GPIO11(SPI0_SCK)
-Text Label 3600 4500 1    50   ~ 0
+Text Label 3100 4500 1    50   ~ 0
 GPIO8(SPI0_CE_0)
-Text Label 3700 4500 1    50   ~ 0
+Text Label 3200 4500 1    50   ~ 0
 GPIO7(SPI0_CE_1)
 $Comp
 L power:+5VP #PWR010
@@ -614,8 +561,6 @@ Wire Wire Line
 Wire Wire Line
 	6400 4850 6400 4500
 Connection ~ 6400 4500
-Wire Wire Line
-	6800 4850 6800 4600
 Connection ~ 6800 4600
 Wire Wire Line
 	6800 4600 5600 4600
@@ -691,14 +636,7 @@ Wire Wire Line
 Wire Wire Line
 	9300 1600 9300 1800
 NoConn ~ 3950 2400
-NoConn ~ 3950 2600
-NoConn ~ 3950 2900
-NoConn ~ 3950 3000
 NoConn ~ 1250 2400
-NoConn ~ 1250 2500
-NoConn ~ 1250 2600
-NoConn ~ 1250 2700
-NoConn ~ 1250 2800
 Wire Wire Line
 	900  4800 900  4900
 Wire Wire Line
@@ -877,7 +815,6 @@ F 3 "~" H 6700 3400 50  0001 C CNN
 	1    6700 3400
 	1    0    0    -1  
 $EndComp
-Connection ~ 3250 900 
 Wire Wire Line
 	3250 900  3250 1100
 Wire Wire Line
@@ -1011,8 +948,6 @@ Wire Wire Line
 Wire Wire Line
 	6800 4600 7400 4600
 Wire Wire Line
-	6800 5150 6800 5650
-Wire Wire Line
 	6800 5650 6000 5650
 Wire Wire Line
 	9200 4600 9200 4450
@@ -1097,4 +1032,20 @@ F 3 "" H 4800 7100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4800 6850 4800 7100
+Text Label 3700 3750 3    50   ~ 0
+GPIO19(SPI1_MISO)
+Text Label 3300 3750 3    50   ~ 0
+GPIO5
+Text Label 3400 3750 3    50   ~ 0
+GPIO6
+Text Label 3500 3750 3    50   ~ 0
+GPIO12(PWM0)
+Text Label 3600 3750 3    50   ~ 0
+GPIO13(PWM1)
+Text Label 3800 3750 3    50   ~ 0
+GPIO20(SPI1_MOSI)
+Text Label 3900 3750 3    50   ~ 0
+GPIO21(SPI1_SCK)
+Wire Wire Line
+	6800 4600 6800 5650
 $EndSCHEMATC
