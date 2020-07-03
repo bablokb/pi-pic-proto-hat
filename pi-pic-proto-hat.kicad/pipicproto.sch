@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
 Date "2020-07-03"
-Rev "2.07"
+Rev "2.08"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -301,7 +301,7 @@ U 1 1 5E2ED352
 P 7300 2250
 F 0 "R2" H 7370 2296 50  0000 L CNN
 F 1 "1k" H 7370 2205 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7230 2250 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7230 2250 50  0001 C CNN
 F 3 "~" H 7300 2250 50  0001 C CNN
 	1    7300 2250
 	1    0    0    -1  
@@ -312,7 +312,7 @@ U 1 1 5E2F37A1
 P 8000 4600
 F 0 "U1" H 8250 5350 50  0000 C CNN
 F 1 "PIC12F675-IP" H 8300 5250 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 8600 5250 50  0001 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 8600 5250 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41190G.pdf" H 8000 4600 50  0001 C CNN
 	1    8000 4600
 	1    0    0    -1  
@@ -345,7 +345,7 @@ U 1 1 5E312AD7
 P 6400 5000
 F 0 "R5" H 6470 5046 50  0000 L CNN
 F 1 "1k" H 6470 4955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6330 5000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6330 5000 50  0001 C CNN
 F 3 "~" H 6400 5000 50  0001 C CNN
 	1    6400 5000
 	1    0    0    -1  
@@ -356,7 +356,7 @@ U 1 1 5E325F93
 P 6750 1650
 F 0 "R1" H 6820 1696 50  0000 L CNN
 F 1 "10k" H 6820 1605 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6680 1650 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6680 1650 50  0001 C CNN
 F 3 "~" H 6750 1650 50  0001 C CNN
 	1    6750 1650
 	1    0    0    -1  
@@ -551,7 +551,7 @@ U 1 1 5E36E6DD
 P 7500 3850
 F 0 "C1" H 7615 3896 50  0000 L CNN
 F 1 "100n" H 7615 3805 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 7538 3700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7538 3700 50  0001 C CNN
 F 3 "~" H 7500 3850 50  0001 C CNN
 	1    7500 3850
 	1    0    0    -1  
@@ -750,12 +750,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x02_Male J1
 U 1 1 5E41F5B6
-P 6700 3400
-F 0 "J1" H 7000 3450 50  0000 L CNN
-F 1 "RUN/~PGM~" H 7000 3350 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6700 3400 50  0001 C CNN
-F 3 "~" H 6700 3400 50  0001 C CNN
-	1    6700 3400
+P 6300 2500
+F 0 "J1" H 6600 2550 50  0000 L CNN
+F 1 "RUN/~PGM~" H 6600 2450 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6300 2500 50  0001 C CNN
+F 3 "~" H 6300 2500 50  0001 C CNN
+	1    6300 2500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -839,7 +839,7 @@ U 1 1 5EF5E7F1
 P 5850 5650
 F 0 "R7" V 5643 5650 50  0000 C CNN
 F 1 "6.2k" V 5734 5650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5780 5650 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5780 5650 50  0001 C CNN
 F 3 "~" H 5850 5650 50  0001 C CNN
 	1    5850 5650
 	0    1    1    0   
@@ -850,7 +850,7 @@ U 1 1 5EF5EC98
 P 5500 6000
 F 0 "R8" H 5570 6046 50  0000 L CNN
 F 1 "12k" H 5570 5955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5430 6000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5430 6000 50  0001 C CNN
 F 3 "~" H 5500 6000 50  0001 C CNN
 	1    5500 6000
 	1    0    0    -1  
@@ -897,25 +897,9 @@ Text Notes 9200 4150 1    50   ~ 0
 GP4
 Text Notes 9350 4150 1    50   ~ 0
 GP2
-Connection ~ 6900 4300
-Wire Wire Line
-	6900 4300 7250 4300
-Wire Wire Line
-	6900 3400 6900 3200
 Wire Wire Line
 	3250 900  7750 900 
 Connection ~ 6550 4300
-Wire Wire Line
-	6550 4300 6900 4300
-Wire Wire Line
-	6250 3200 6500 3200
-Wire Wire Line
-	6500 3200 6500 1500
-Connection ~ 6500 3200
-Wire Wire Line
-	6500 3200 6900 3200
-Wire Wire Line
-	6900 3500 6900 4300
 Wire Wire Line
 	5600 3750 5900 3750
 $Comp
@@ -986,4 +970,20 @@ Wire Wire Line
 Connection ~ 6600 1500
 Wire Wire Line
 	6600 1500 6500 1500
+Wire Wire Line
+	6250 3200 6500 3200
+Wire Wire Line
+	6500 1500 6500 2500
+Wire Wire Line
+	6500 2600 6500 3200
+Connection ~ 6500 3200
+Wire Wire Line
+	6500 3200 6900 3200
+Wire Wire Line
+	6550 4300 6900 4300
+Wire Wire Line
+	6900 4300 7250 4300
+Connection ~ 6900 4300
+Wire Wire Line
+	6900 3200 6900 4300
 $EndSCHEMATC
