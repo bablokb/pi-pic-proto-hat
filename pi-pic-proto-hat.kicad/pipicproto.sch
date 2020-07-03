@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-06-29"
-Rev "2.06"
+Date "2020-07-03"
+Rev "2.07"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -285,28 +285,6 @@ Wire Wire Line
 Wire Wire Line
 	3000 1700 3000 2000
 $Comp
-L Connector:Conn_01x02_Male J2
-U 1 1 5E2DFDDC
-P 5300 1500
-F 0 "J2" H 5408 1681 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 5408 1590 50  0000 C CNN
-F 2 "Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.81_1x02_P3.81mm_Horizontal" H 5300 1500 50  0001 C CNN
-F 3 "~" H 5300 1500 50  0001 C CNN
-	1    5300 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 5E2E091B
-P 9700 1500
-F 0 "J3" H 9900 1750 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 10350 1650 50  0000 R CNN
-F 2 "Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.81_1x02_P3.81mm_Horizontal" H 9700 1500 50  0001 C CNN
-F 3 "~" H 9700 1500 50  0001 C CNN
-	1    9700 1500
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Transistor_FET:IRF4905 Q1
 U 1 1 5E2E1286
 P 7300 1600
@@ -404,28 +382,6 @@ F 2 "" H 6000 4400 50  0001 C CNN
 F 3 "" H 6000 4400 50  0001 C CNN
 	1    6000 4400
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR04
-U 1 1 5E340FE7
-P 5700 1700
-F 0 "#PWR04" H 5700 1450 50  0001 C CNN
-F 1 "GND" H 5705 1527 50  0000 C CNN
-F 2 "" H 5700 1700 50  0001 C CNN
-F 3 "" H 5700 1700 50  0001 C CNN
-	1    5700 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR05
-U 1 1 5E34361A
-P 9300 1800
-F 0 "#PWR05" H 9300 1550 50  0001 C CNN
-F 1 "GND" H 9305 1627 50  0000 C CNN
-F 2 "" H 9300 1800 50  0001 C CNN
-F 3 "" H 9300 1800 50  0001 C CNN
-	1    9300 1800
-	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x13_Male J10
@@ -626,15 +582,8 @@ Connection ~ 7300 1800
 Wire Wire Line
 	7100 1500 6750 1500
 Wire Wire Line
-	6750 1500 6500 1500
+	6750 1500 6600 1500
 Connection ~ 6750 1500
-Wire Wire Line
-	6000 1250 6000 1500
-Connection ~ 6000 1500
-Wire Wire Line
-	9500 1600 9300 1600
-Wire Wire Line
-	9300 1600 9300 1800
 NoConn ~ 3950 2400
 NoConn ~ 1250 2400
 Wire Wire Line
@@ -787,12 +736,6 @@ $EndComp
 Wire Wire Line
 	6450 3400 6250 3400
 NoConn ~ 6250 3300
-Wire Wire Line
-	5500 1500 6000 1500
-Wire Wire Line
-	5500 1600 5700 1600
-Wire Wire Line
-	5700 1600 5700 1700
 $Comp
 L Connector:Barrel_Jack_Switch J6
 U 1 1 5E3F667C
@@ -821,9 +764,6 @@ Wire Wire Line
 	7500 1500 7750 1500
 Wire Wire Line
 	7750 900  7750 1500
-Connection ~ 7750 1500
-Wire Wire Line
-	7750 1500 9500 1500
 $Comp
 L Connector:Conn_01x13_Male J22
 U 1 1 5E376781
@@ -883,8 +823,6 @@ Wire Wire Line
 Wire Wire Line
 	1700 5950 1450 5950
 Connection ~ 1450 5950
-Text Notes 7850 1450 0    50   ~ 0
-5V to ext.\nconnector J3 \n
 Wire Wire Line
 	8600 4700 8950 4700
 Wire Wire Line
@@ -976,9 +914,6 @@ Wire Wire Line
 Connection ~ 6500 3200
 Wire Wire Line
 	6500 3200 6900 3200
-Connection ~ 6500 1500
-Wire Wire Line
-	6500 1500 6000 1500
 Wire Wire Line
 	6900 3500 6900 4300
 Wire Wire Line
@@ -986,12 +921,12 @@ Wire Wire Line
 $Comp
 L power:+5P #PWR0103
 U 1 1 5F0543B9
-P 6000 1250
-F 0 "#PWR0103" H 6000 1100 50  0001 C CNN
-F 1 "+5P" H 6000 1390 50  0000 C CNN
-F 2 "" H 6000 1250 50  0000 C CNN
-F 3 "" H 6000 1250 50  0000 C CNN
-	1    6000 1250
+P 6600 1500
+F 0 "#PWR0103" H 6600 1350 50  0001 C CNN
+F 1 "+5P" H 6600 1640 50  0000 C CNN
+F 2 "" H 6600 1500 50  0000 C CNN
+F 3 "" H 6600 1500 50  0000 C CNN
+	1    6600 1500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1048,4 +983,7 @@ Text Label 3900 3750 3    50   ~ 0
 GPIO21(SPI1_SCK)
 Wire Wire Line
 	6800 4600 6800 5650
+Connection ~ 6600 1500
+Wire Wire Line
+	6600 1500 6500 1500
 $EndSCHEMATC
