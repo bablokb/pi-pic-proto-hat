@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-07-03"
-Rev "2.10"
+Date "2020-07-18"
+Rev "2.11"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -762,8 +762,6 @@ Wire Wire Line
 	3250 900  3250 1100
 Wire Wire Line
 	7500 1500 7750 1500
-Wire Wire Line
-	7750 900  7750 1500
 $Comp
 L Connector:Conn_01x13_Male J22
 U 1 1 5E376781
@@ -975,7 +973,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 1500 6500 2500
 Wire Wire Line
-	6500 2600 6500 3200
+	6500 2600 6500 2950
 Connection ~ 6500 3200
 Wire Wire Line
 	6500 3200 6900 3200
@@ -986,4 +984,86 @@ Wire Wire Line
 Connection ~ 6900 4300
 Wire Wire Line
 	6900 3200 6900 4300
+$Comp
+L Device:R R3
+U 1 1 5F130E6C
+P 8050 1200
+F 0 "R3" V 7900 1150 50  0000 L CNN
+F 1 "1k" V 8150 1150 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7980 1200 50  0001 C CNN
+F 3 "~" H 8050 1200 50  0001 C CNN
+	1    8050 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5F137581
+P 8350 1200
+F 0 "D1" H 8343 945 50  0000 C CNN
+F 1 "LED" H 8343 1036 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8350 1200 50  0001 C CNN
+F 3 "~" H 8350 1200 50  0001 C CNN
+	1    8350 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5F14E188
+P 8600 1200
+F 0 "#PWR03" H 8600 950 50  0001 C CNN
+F 1 "GND" H 8605 1027 50  0000 C CNN
+F 2 "" H 8600 1200 50  0001 C CNN
+F 3 "" H 8600 1200 50  0001 C CNN
+	1    8600 1200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7750 900  7750 1200
+Wire Wire Line
+	8500 1200 8600 1200
+Wire Wire Line
+	7900 1200 7750 1200
+Connection ~ 7750 1200
+Wire Wire Line
+	7750 1200 7750 1500
+$Comp
+L Device:R R4
+U 1 1 5F16FFEA
+P 6800 2950
+F 0 "R4" V 6650 2900 50  0000 L CNN
+F 1 "1k" V 6900 2900 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6730 2950 50  0001 C CNN
+F 3 "~" H 6800 2950 50  0001 C CNN
+	1    6800 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5F16FFF0
+P 7100 2950
+F 0 "D2" H 7093 2695 50  0000 C CNN
+F 1 "LED" H 7093 2786 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7100 2950 50  0001 C CNN
+F 3 "~" H 7100 2950 50  0001 C CNN
+	1    7100 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5F16FFF6
+P 7350 2950
+F 0 "#PWR04" H 7350 2700 50  0001 C CNN
+F 1 "GND" H 7355 2777 50  0000 C CNN
+F 2 "" H 7350 2950 50  0001 C CNN
+F 3 "" H 7350 2950 50  0001 C CNN
+	1    7350 2950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7250 2950 7350 2950
+Wire Wire Line
+	6650 2950 6500 2950
+Connection ~ 6500 2950
+Wire Wire Line
+	6500 2950 6500 3200
 $EndSCHEMATC
