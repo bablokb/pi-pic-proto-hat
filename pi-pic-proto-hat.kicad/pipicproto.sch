@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
 Date "2020-07-18"
-Rev "2.11"
+Rev "2.12"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -747,17 +747,6 @@ F 3 "~" H 6000 3260 50  0001 C CNN
 	1    5950 3300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x02_Male J1
-U 1 1 5E41F5B6
-P 6300 2500
-F 0 "J1" H 6600 2550 50  0000 L CNN
-F 1 "RUN/~PGM~" H 6600 2450 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6300 2500 50  0001 C CNN
-F 3 "~" H 6300 2500 50  0001 C CNN
-	1    6300 2500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3250 900  3250 1100
 Wire Wire Line
@@ -970,20 +959,12 @@ Wire Wire Line
 	6600 1500 6500 1500
 Wire Wire Line
 	6250 3200 6500 3200
-Wire Wire Line
-	6500 1500 6500 2500
-Wire Wire Line
-	6500 2600 6500 2950
 Connection ~ 6500 3200
-Wire Wire Line
-	6500 3200 6900 3200
 Wire Wire Line
 	6550 4300 6900 4300
 Wire Wire Line
 	6900 4300 7250 4300
 Connection ~ 6900 4300
-Wire Wire Line
-	6900 3200 6900 4300
 $Comp
 L Device:R R3
 U 1 1 5F130E6C
@@ -1066,4 +1047,23 @@ Wire Wire Line
 Connection ~ 6500 2950
 Wire Wire Line
 	6500 2950 6500 3200
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5E41F5B6
+P 7100 3400
+F 0 "J1" H 6950 3300 50  0000 L CNN
+F 1 "RUN/~PGM~" H 6700 3400 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7100 3400 50  0001 C CNN
+F 3 "~" H 7100 3400 50  0001 C CNN
+	1    7100 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6900 3200 6900 3300
+Wire Wire Line
+	6900 3400 6900 4300
+Wire Wire Line
+	6500 1500 6500 2950
+Wire Wire Line
+	6500 3200 6900 3200
 $EndSCHEMATC
