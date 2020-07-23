@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-07-18"
-Rev "2.12"
+Date "2020-07-23"
+Rev "2.13"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -879,7 +879,7 @@ Wire Wire Line
 Wire Wire Line
 	7250 5750 9300 5750
 Wire Wire Line
-	9300 5750 9300 4450
+	9300 5750 9300 4900
 Text Notes 9200 4150 1    50   ~ 0
 GP4
 Text Notes 9350 4150 1    50   ~ 0
@@ -1066,4 +1066,54 @@ Wire Wire Line
 	6500 1500 6500 2950
 Wire Wire Line
 	6500 3200 6900 3200
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5F19E2FA
+P 9650 4900
+F 0 "SW1" H 9650 5185 50  0000 C CNN
+F 1 "SW_Push" H 9650 5094 50  0000 C CNN
+F 2 "user:SW_PUSH_SLIM_1x4" H 9650 5100 50  0001 C CNN
+F 3 "~" H 9650 5100 50  0001 C CNN
+	1    9650 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 4900 9300 4900
+Connection ~ 9300 4900
+Wire Wire Line
+	9300 4900 9300 4450
+$Comp
+L power:GND #PWR05
+U 1 1 5F1A4F9E
+P 10150 4900
+F 0 "#PWR05" H 10150 4650 50  0001 C CNN
+F 1 "GND" H 10155 4727 50  0000 C CNN
+F 2 "" H 10150 4900 50  0001 C CNN
+F 3 "" H 10150 4900 50  0001 C CNN
+	1    10150 4900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9850 4900 10150 4900
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5F1ABA22
+P 9700 5250
+F 0 "J2" V 9700 5450 50  0000 R CNN
+F 1 "Conn_SW1" V 9850 6000 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9700 5250 50  0001 C CNN
+F 3 "~" H 9700 5250 50  0001 C CNN
+	1    9700 5250
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	9850 4900 9850 5050
+Wire Wire Line
+	9850 5050 9700 5050
+Connection ~ 9850 4900
+Wire Wire Line
+	9450 4900 9450 5050
+Wire Wire Line
+	9450 5050 9600 5050
+Connection ~ 9450 4900
 $EndSCHEMATC
