@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
 Date "2020-07-24"
-Rev "2.14"
+Rev "2.15"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -1059,7 +1059,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 3400 6900 4300
 Wire Wire Line
-	6500 1500 6500 2950
+	6500 1500 6500 2050
 Wire Wire Line
 	6500 3200 6900 3200
 $Comp
@@ -1118,4 +1118,32 @@ Connection ~ 1450 5950
 Wire Wire Line
 	1450 5850 1700 5850
 Connection ~ 1450 5850
+$Comp
+L Connector:Conn_01x05_Male J3
+U 1 1 5F1C34FF
+P 5800 1850
+F 0 "J3" H 5908 2231 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 5908 2140 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5800 1850 50  0001 C CNN
+F 3 "~" H 5800 1850 50  0001 C CNN
+	1    5800 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2050 6000 2050
+Wire Wire Line
+	6000 2050 6000 1950
+Connection ~ 6500 2050
+Wire Wire Line
+	6500 2050 6500 2950
+Connection ~ 6000 2050
+Wire Wire Line
+	6000 1850 6000 1750
+Wire Wire Line
+	6000 1950 6000 1850
+Connection ~ 6000 1950
+Connection ~ 6000 1850
+Wire Wire Line
+	6000 1750 6000 1650
+Connection ~ 6000 1750
 $EndSCHEMATC
