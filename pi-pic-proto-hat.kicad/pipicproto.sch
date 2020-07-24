@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-07-23"
-Rev "2.13"
+Date "2020-07-24"
+Rev "2.14"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -779,7 +779,6 @@ Wire Wire Line
 Connection ~ 1450 5650
 Wire Wire Line
 	1450 5650 1450 5750
-NoConn ~ 1450 5850
 $Comp
 L power:+3.3V #PWR0101
 U 1 1 5E48C144
@@ -806,10 +805,7 @@ Connection ~ 1450 6350
 Wire Wire Line
 	1450 6350 1450 6250
 Wire Wire Line
-	1700 4950 1700 5950
-Wire Wire Line
-	1700 5950 1450 5950
-Connection ~ 1450 5950
+	1700 4950 1700 5850
 Wire Wire Line
 	8600 4700 8950 4700
 Wire Wire Line
@@ -1116,4 +1112,10 @@ Wire Wire Line
 Wire Wire Line
 	9450 5050 9600 5050
 Connection ~ 9450 4900
+Wire Wire Line
+	1450 5950 1450 5850
+Connection ~ 1450 5950
+Wire Wire Line
+	1450 5850 1700 5850
+Connection ~ 1450 5850
 $EndSCHEMATC
