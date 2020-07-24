@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
 Date "2020-07-24"
-Rev "2.15"
+Rev "2.16"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -1059,7 +1059,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 3400 6900 4300
 Wire Wire Line
-	6500 1500 6500 2050
+	6500 1500 6500 1600
 Wire Wire Line
 	6500 3200 6900 3200
 $Comp
@@ -1121,29 +1121,118 @@ Connection ~ 1450 5850
 $Comp
 L Connector:Conn_01x05_Male J3
 U 1 1 5F1C34FF
-P 5800 1850
-F 0 "J3" H 5908 2231 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 5908 2140 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5800 1850 50  0001 C CNN
-F 3 "~" H 5800 1850 50  0001 C CNN
-	1    5800 1850
+P 5800 1400
+F 0 "J3" H 5900 1800 50  0000 C CNN
+F 1 "Conn_5P" H 5900 1750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5800 1400 50  0001 C CNN
+F 3 "~" H 5800 1400 50  0001 C CNN
+	1    5800 1400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6500 2050 6000 2050
+	6500 1600 6000 1600
 Wire Wire Line
-	6000 2050 6000 1950
-Connection ~ 6500 2050
+	6000 1600 6000 1500
+Connection ~ 6000 1600
 Wire Wire Line
-	6500 2050 6500 2950
-Connection ~ 6000 2050
+	6000 1400 6000 1300
 Wire Wire Line
-	6000 1850 6000 1750
+	6000 1500 6000 1400
+Connection ~ 6000 1500
+Connection ~ 6000 1400
 Wire Wire Line
-	6000 1950 6000 1850
-Connection ~ 6000 1950
-Connection ~ 6000 1850
+	6000 1300 6000 1200
+Connection ~ 6000 1300
+$Comp
+L power:GND #PWR09
+U 1 1 5F1C3E14
+P 4950 2350
+F 0 "#PWR09" H 4950 2100 50  0001 C CNN
+F 1 "GND" H 4955 2177 50  0000 C CNN
+F 2 "" H 4950 2350 50  0001 C CNN
+F 3 "" H 4950 2350 50  0001 C CNN
+	1    4950 2350
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	6000 1750 6000 1650
-Connection ~ 6000 1750
+	5300 2350 5250 2350
+$Comp
+L Device:CP C2
+U 1 1 5F1C3E1B
+P 5250 2200
+F 0 "C2" H 5050 2300 50  0000 C CNN
+F 1 "10µF" H 5000 2200 50  0000 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 5288 2050 50  0001 C CNN
+F 3 "~" H 5250 2200 50  0001 C CNN
+	1    5250 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 5250 2350
+Wire Wire Line
+	5250 2350 4950 2350
+$Comp
+L Device:CP C3
+U 1 1 5F1C3E29
+P 5250 2500
+F 0 "C3" H 5450 2500 50  0000 C CNN
+F 1 "10µF" H 5500 2600 50  0000 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 5288 2350 50  0001 C CNN
+F 3 "~" H 5250 2500 50  0001 C CNN
+	1    5250 2500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5250 2050 5450 2050
+Connection ~ 6500 1600
+Wire Wire Line
+	6500 1600 6500 2650
+Connection ~ 6500 2650
+Wire Wire Line
+	6500 2650 6500 2950
+$Comp
+L Connector:Conn_01x05_Male J4
+U 1 1 5F1D5F8D
+P 5050 1400
+F 0 "J4" H 5150 1800 50  0000 C CNN
+F 1 "Conn_3V3P" H 5150 1750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5050 1400 50  0001 C CNN
+F 3 "~" H 5050 1400 50  0001 C CNN
+	1    5050 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2050 5450 1600
+Wire Wire Line
+	5450 1600 5250 1600
+Connection ~ 5450 2050
+Wire Wire Line
+	5450 2050 5600 2050
+Wire Wire Line
+	5250 1600 5250 1500
+Connection ~ 5250 1600
+Wire Wire Line
+	5250 1500 5250 1400
+Connection ~ 5250 1500
+Wire Wire Line
+	5250 1400 5250 1300
+Connection ~ 5250 1400
+Wire Wire Line
+	5250 1300 5250 1200
+Connection ~ 5250 1300
+Connection ~ 5600 2650
+Wire Wire Line
+	5600 2650 6500 2650
+Wire Wire Line
+	5250 2650 5600 2650
+$Comp
+L Regulator_Linear:TLV1117-33 U2
+U 1 1 5F1C3E21
+P 5600 2350
+F 0 "U2" V 5200 2250 50  0000 C CNN
+F 1 "TLV1117-33" V 5100 2250 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 5600 2350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv1117.pdf" H 5600 2350 50  0001 C CNN
+	1    5600 2350
+	0    1    -1   0   
+$EndComp
 $EndSCHEMATC
