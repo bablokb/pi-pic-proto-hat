@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-07-24"
-Rev "2.16"
+Date "2020-07-25"
+Rev "2.17"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -331,13 +331,13 @@ $EndComp
 $Comp
 L Connector:Conn_01x02_Male J9
 U 1 1 5E2FB733
-P 9200 4250
-F 0 "J9" V 9250 4000 50  0000 R CNN
-F 1 "Conn_01x02_Male" V 9350 4000 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9200 4250 50  0001 C CNN
-F 3 "~" H 9200 4250 50  0001 C CNN
-	1    9200 4250
-	0    -1   1    0   
+P 9650 4600
+F 0 "J9" H 9800 4400 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 9900 4300 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9650 4600 50  0001 C CNN
+F 3 "~" H 9650 4600 50  0001 C CNN
+	1    9650 4600
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:R R5
@@ -532,9 +532,7 @@ Wire Wire Line
 	8750 4500 8750 3750
 Wire Wire Line
 	5600 3750 5600 4200
-Wire Wire Line
-	8600 4600 9200 4600
-Text Notes 9150 3900 0    50   ~ 0
+Text Notes 10000 4650 0    50   ~ 0
 PIC_GPIO
 NoConn ~ 5600 4700
 Text Notes 5400 4850 0    50   ~ 0
@@ -871,14 +869,10 @@ Wire Wire Line
 Wire Wire Line
 	6800 5650 6000 5650
 Wire Wire Line
-	9200 4600 9200 4450
-Wire Wire Line
 	7250 5750 9300 5750
-Wire Wire Line
-	9300 5750 9300 4900
-Text Notes 9200 4150 1    50   ~ 0
+Text Notes 9950 4600 2    50   ~ 0
 GP4
-Text Notes 9350 4150 1    50   ~ 0
+Text Notes 9950 4750 2    50   ~ 0
 GP2
 Wire Wire Line
 	3250 900  7750 900 
@@ -1065,53 +1059,50 @@ Wire Wire Line
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5F19E2FA
-P 9650 4900
-F 0 "SW1" H 9650 5185 50  0000 C CNN
-F 1 "SW_Push" H 9650 5094 50  0000 C CNN
-F 2 "user:SW_PUSH_SLIM_1x4" H 9650 5100 50  0001 C CNN
-F 3 "~" H 9650 5100 50  0001 C CNN
-	1    9650 4900
+P 9700 4050
+F 0 "SW1" H 9700 4335 50  0000 C CNN
+F 1 "SW_Push" H 9700 4244 50  0000 C CNN
+F 2 "user:SW_PUSH_SLIM_1x4" H 9700 4250 50  0001 C CNN
+F 3 "~" H 9700 4250 50  0001 C CNN
+	1    9700 4050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9450 4900 9300 4900
-Connection ~ 9300 4900
-Wire Wire Line
-	9300 4900 9300 4450
+	9500 4050 9350 4050
 $Comp
 L power:GND #PWR05
 U 1 1 5F1A4F9E
-P 10150 4900
-F 0 "#PWR05" H 10150 4650 50  0001 C CNN
-F 1 "GND" H 10155 4727 50  0000 C CNN
-F 2 "" H 10150 4900 50  0001 C CNN
-F 3 "" H 10150 4900 50  0001 C CNN
-	1    10150 4900
+P 10200 4050
+F 0 "#PWR05" H 10200 3800 50  0001 C CNN
+F 1 "GND" H 10205 3877 50  0000 C CNN
+F 2 "" H 10200 4050 50  0001 C CNN
+F 3 "" H 10200 4050 50  0001 C CNN
+	1    10200 4050
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	9850 4900 10150 4900
+	9900 4050 10200 4050
 $Comp
 L Connector:Conn_01x02_Male J2
 U 1 1 5F1ABA22
-P 9700 5250
-F 0 "J2" V 9700 5450 50  0000 R CNN
-F 1 "Conn_SW1" V 9850 6000 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9700 5250 50  0001 C CNN
-F 3 "~" H 9700 5250 50  0001 C CNN
-	1    9700 5250
+P 9750 4400
+F 0 "J2" V 9750 4600 50  0000 R CNN
+F 1 "Conn_SW1" V 9900 5150 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9750 4400 50  0001 C CNN
+F 3 "~" H 9750 4400 50  0001 C CNN
+	1    9750 4400
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	9850 4900 9850 5050
+	9900 4050 9900 4200
 Wire Wire Line
-	9850 5050 9700 5050
-Connection ~ 9850 4900
+	9900 4200 9750 4200
+Connection ~ 9900 4050
 Wire Wire Line
-	9450 4900 9450 5050
+	9500 4050 9500 4200
 Wire Wire Line
-	9450 5050 9600 5050
-Connection ~ 9450 4900
+	9500 4200 9650 4200
+Connection ~ 9500 4050
 Wire Wire Line
 	1450 5950 1450 5850
 Connection ~ 1450 5950
@@ -1235,4 +1226,15 @@ F 3 "http://www.ti.com/lit/ds/symlink/tlv1117.pdf" H 5600 2350 50  0001 C CNN
 	1    5600 2350
 	0    1    -1   0   
 $EndComp
+Wire Wire Line
+	8600 4600 9350 4600
+Wire Wire Line
+	9300 5750 9300 4700
+Wire Wire Line
+	9300 4700 9450 4700
+Wire Wire Line
+	9350 4050 9350 4600
+Connection ~ 9350 4600
+Wire Wire Line
+	9350 4600 9450 4600
 $EndSCHEMATC
