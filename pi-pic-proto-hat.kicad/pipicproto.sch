@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-07-25"
-Rev "2.19"
+Date "2020-07-30"
+Rev "2.20"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -548,7 +548,7 @@ L Device:C C1
 U 1 1 5E36E6DD
 P 7500 3850
 F 0 "C1" H 7615 3896 50  0000 L CNN
-F 1 "100n" H 7615 3805 50  0000 L CNN
+F 1 "100nF" H 7615 3805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7538 3700 50  0001 C CNN
 F 3 "~" H 7500 3850 50  0001 C CNN
 	1    7500 3850
@@ -1227,7 +1227,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/tlv1117.pdf" H 5600 2350 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	8600 4600 9350 4600
+	8600 4600 9150 4600
 Wire Wire Line
 	9300 5750 9300 4700
 Wire Wire Line
@@ -1293,4 +1293,172 @@ Wire Wire Line
 Connection ~ 7950 2400
 Wire Wire Line
 	7950 2400 7300 2400
+$Comp
+L Timer_RTC:DS3231M U3
+U 1 1 5F238501
+P 10200 1850
+F 0 "U3" H 10450 2450 50  0000 C CNN
+F 1 "DS3231M" H 10550 2350 50  0000 C CNN
+F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 10200 1250 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 10470 1900 50  0001 C CNN
+	1    10200 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J13
+U 1 1 5F2395D8
+P 9850 3100
+F 0 "J13" H 9950 3450 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 9950 3350 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9850 3100 50  0001 C CNN
+F 3 "~" H 9850 3100 50  0001 C CNN
+	1    9850 3100
+	1    0    0    -1  
+$EndComp
+Text Label 10400 3100 0    50   ~ 0
+GPIO2(SDA1)
+Text Label 10400 3000 0    50   ~ 0
+GPIO3(SCL1)
+Text Label 9450 1750 2    50   ~ 0
+GPIO2(SDA1)
+Text Label 9450 1650 2    50   ~ 0
+GPIO3(SCL1)
+Text Label 10400 3300 0    50   ~ 0
+~INT
+Text Label 10900 1950 0    50   ~ 0
+~INT
+NoConn ~ 10700 1650
+$Comp
+L power:GND #PWR013
+U 1 1 5F24DB44
+P 10200 2250
+F 0 "#PWR013" H 10200 2000 50  0001 C CNN
+F 1 "GND" H 10205 2077 50  0000 C CNN
+F 2 "" H 10200 2250 50  0001 C CNN
+F 3 "" H 10200 2250 50  0001 C CNN
+	1    10200 2250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9700 2050
+$Comp
+L Device:R R6
+U 1 1 5F25761B
+P 10100 1000
+F 0 "R6" H 10030 954 50  0000 R CNN
+F 1 "10k" H 10030 1045 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10030 1000 50  0001 C CNN
+F 3 "~" H 10100 1000 50  0001 C CNN
+	1    10100 1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5P #PWR012
+U 1 1 5F26109E
+P 9900 850
+F 0 "#PWR012" H 9900 700 50  0001 C CNN
+F 1 "+5P" H 9900 990 50  0000 C CNN
+F 2 "" H 9900 850 50  0000 C CNN
+F 3 "" H 9900 850 50  0000 C CNN
+	1    9900 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 850  10100 850 
+Wire Wire Line
+	10700 1950 10900 1950
+Wire Wire Line
+	10050 3100 10400 3100
+Wire Wire Line
+	10050 3000 10400 3000
+Wire Wire Line
+	9700 1650 9450 1650
+Wire Wire Line
+	9700 1750 9450 1750
+Text Label 10400 3200 0    50   ~ 0
+VBAT
+Text Label 10300 1150 0    50   ~ 0
+VBAT
+Wire Wire Line
+	10200 1450 10200 1150
+Wire Wire Line
+	10200 1150 10300 1150
+Wire Wire Line
+	10400 3200 10050 3200
+Text Label 9950 1050 2    50   ~ 0
+VCC
+Wire Wire Line
+	10050 3300 10400 3300
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5F2E32E1
+P 9650 1350
+F 0 "#FLG0103" H 9650 1425 50  0001 C CNN
+F 1 "PWR_FLAG" H 9650 1523 50  0000 C CNN
+F 2 "" H 9650 1350 50  0001 C CNN
+F 3 "~" H 9650 1350 50  0001 C CNN
+	1    9650 1350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9650 1350 9650 1450
+Wire Wire Line
+	9650 1450 10100 1450
+Connection ~ 10100 1450
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5F2EE834
+P 10800 1450
+F 0 "#FLG0104" H 10800 1525 50  0001 C CNN
+F 1 "PWR_FLAG" H 10800 1623 50  0000 C CNN
+F 2 "" H 10800 1450 50  0001 C CNN
+F 3 "~" H 10800 1450 50  0001 C CNN
+	1    10800 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10800 1450 10200 1450
+Connection ~ 10200 1450
+$Comp
+L Device:C C4
+U 1 1 5F313C7C
+P 9550 1000
+F 0 "C4" V 9298 1000 50  0000 C CNN
+F 1 "100nF" V 9389 1000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9588 850 50  0001 C CNN
+F 3 "~" H 9550 1000 50  0001 C CNN
+	1    9550 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10100 1150 10100 1200
+Wire Wire Line
+	9950 1050 9950 1200
+Wire Wire Line
+	9950 1200 10100 1200
+Connection ~ 10100 1200
+Wire Wire Line
+	10100 1200 10100 1450
+Wire Wire Line
+	9700 1000 9700 1200
+Wire Wire Line
+	9700 1200 9950 1200
+Connection ~ 9950 1200
+$Comp
+L power:GND #PWR023
+U 1 1 5F34D64A
+P 9400 1000
+F 0 "#PWR023" H 9400 750 50  0001 C CNN
+F 1 "GND" H 9405 827 50  0000 C CNN
+F 2 "" H 9400 1000 50  0001 C CNN
+F 3 "" H 9400 1000 50  0001 C CNN
+	1    9400 1000
+	0    1    1    0   
+$EndComp
+Text Label 9150 4500 1    50   ~ 0
+~INT
+Wire Wire Line
+	9150 4500 9150 4600
+Connection ~ 9150 4600
+Wire Wire Line
+	9150 4600 9350 4600
 $EndSCHEMATC
