@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
-Date "2020-07-30"
-Rev "2.20"
+Date "2020-08-01"
+Rev "2.21"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -1297,22 +1297,22 @@ $Comp
 L Timer_RTC:DS3231M U3
 U 1 1 5F238501
 P 10200 1850
-F 0 "U3" H 10450 2450 50  0000 C CNN
-F 1 "DS3231M" H 10550 2350 50  0000 C CNN
+F 0 "U3" H 10350 2300 50  0000 C CNN
+F 1 "DS3231M" H 10450 2200 50  0000 C CNN
 F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 10200 1250 50  0001 C CNN
 F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 10470 1900 50  0001 C CNN
 	1    10200 1850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Male J13
+L Connector:Conn_01x05_Male J13
 U 1 1 5F2395D8
-P 9850 3100
-F 0 "J13" H 9950 3450 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 9950 3350 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9850 3100 50  0001 C CNN
-F 3 "~" H 9850 3100 50  0001 C CNN
-	1    9850 3100
+P 9850 3200
+F 0 "J13" H 9950 3600 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 9950 3500 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 9850 3200 50  0001 C CNN
+F 3 "~" H 9850 3200 50  0001 C CNN
+	1    9850 3200
 	1    0    0    -1  
 $EndComp
 Text Label 10400 3100 0    50   ~ 0
@@ -1327,7 +1327,6 @@ Text Label 10400 3300 0    50   ~ 0
 ~INT
 Text Label 10900 1950 0    50   ~ 0
 ~INT
-NoConn ~ 10700 1650
 $Comp
 L power:GND #PWR013
 U 1 1 5F24DB44
@@ -1409,7 +1408,7 @@ L power:PWR_FLAG #FLG0104
 U 1 1 5F2EE834
 P 10800 1450
 F 0 "#FLG0104" H 10800 1525 50  0001 C CNN
-F 1 "PWR_FLAG" H 10800 1623 50  0000 C CNN
+F 1 "PWR_FLAG" V 10700 1600 50  0000 C CNN
 F 2 "" H 10800 1450 50  0001 C CNN
 F 3 "~" H 10800 1450 50  0001 C CNN
 	1    10800 1450
@@ -1461,4 +1460,12 @@ Wire Wire Line
 Connection ~ 9150 4600
 Wire Wire Line
 	9150 4600 9350 4600
+Text Label 10400 3400 0    50   ~ 0
+32KHZ
+Wire Wire Line
+	10050 3400 10400 3400
+Text Label 10900 1650 0    50   ~ 0
+32KHZ
+Wire Wire Line
+	10700 1650 10900 1650
 $EndSCHEMATC
