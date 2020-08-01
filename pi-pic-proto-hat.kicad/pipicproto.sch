@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "PI PIC Prototyping Area"
 Date "2020-08-01"
-Rev "2.21"
+Rev "2.22"
 Comp "Bernhard Bablok, Lothar Hiller"
 Comment1 "https://github.com/bablokb/pi-pic-proto-hat"
 Comment2 "V2"
@@ -1307,23 +1307,23 @@ $EndComp
 $Comp
 L Connector:Conn_01x05_Male J13
 U 1 1 5F2395D8
-P 9850 3200
-F 0 "J13" H 9950 3600 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 9950 3500 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 9850 3200 50  0001 C CNN
-F 3 "~" H 9850 3200 50  0001 C CNN
-	1    9850 3200
+P 9900 3000
+F 0 "J13" H 10000 3400 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 10000 3300 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 9900 3000 50  0001 C CNN
+F 3 "~" H 9900 3000 50  0001 C CNN
+	1    9900 3000
 	1    0    0    -1  
 $EndComp
-Text Label 10400 3100 0    50   ~ 0
+Text Label 10450 2900 0    50   ~ 0
 GPIO2(SDA1)
-Text Label 10400 3000 0    50   ~ 0
+Text Label 10450 2800 0    50   ~ 0
 GPIO3(SCL1)
 Text Label 9450 1750 2    50   ~ 0
 GPIO2(SDA1)
 Text Label 9450 1650 2    50   ~ 0
 GPIO3(SCL1)
-Text Label 10400 3300 0    50   ~ 0
+Text Label 10450 3100 0    50   ~ 0
 ~INT
 Text Label 10900 1950 0    50   ~ 0
 ~INT
@@ -1338,7 +1338,6 @@ F 3 "" H 10200 2250 50  0001 C CNN
 	1    10200 2250
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9700 2050
 $Comp
 L Device:R R6
 U 1 1 5F25761B
@@ -1366,14 +1365,14 @@ Wire Wire Line
 Wire Wire Line
 	10700 1950 10900 1950
 Wire Wire Line
-	10050 3100 10400 3100
+	10100 2900 10450 2900
 Wire Wire Line
-	10050 3000 10400 3000
+	10100 2800 10450 2800
 Wire Wire Line
 	9700 1650 9450 1650
 Wire Wire Line
 	9700 1750 9450 1750
-Text Label 10400 3200 0    50   ~ 0
+Text Label 10450 3000 0    50   ~ 0
 VBAT
 Text Label 10300 1150 0    50   ~ 0
 VBAT
@@ -1382,11 +1381,11 @@ Wire Wire Line
 Wire Wire Line
 	10200 1150 10300 1150
 Wire Wire Line
-	10400 3200 10050 3200
+	10450 3000 10100 3000
 Text Label 9950 1050 2    50   ~ 0
 VCC
 Wire Wire Line
-	10050 3300 10400 3300
+	10100 3100 10450 3100
 $Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 5F2E32E1
@@ -1460,12 +1459,40 @@ Wire Wire Line
 Connection ~ 9150 4600
 Wire Wire Line
 	9150 4600 9350 4600
-Text Label 10400 3400 0    50   ~ 0
+Text Label 10450 3200 0    50   ~ 0
 32KHZ
 Wire Wire Line
-	10050 3400 10400 3400
+	10100 3200 10450 3200
 Text Label 10900 1650 0    50   ~ 0
 32KHZ
 Wire Wire Line
 	10700 1650 10900 1650
+$Comp
+L Connector:Conn_01x02_Male J14
+U 1 1 5F2F400C
+P 9900 3700
+F 0 "J14" H 10000 3350 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 10300 3450 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9900 3700 50  0001 C CNN
+F 3 "~" H 9900 3700 50  0001 C CNN
+	1    9900 3700
+	1    0    0    1   
+$EndComp
+Text Label 10100 3700 0    50   ~ 0
+~RST
+$Comp
+L power:GND #PWR022
+U 1 1 5F3365CF
+P 10450 3600
+F 0 "#PWR022" H 10450 3350 50  0001 C CNN
+F 1 "GND" H 10455 3427 50  0000 C CNN
+F 2 "" H 10450 3600 50  0001 C CNN
+F 3 "" H 10450 3600 50  0001 C CNN
+	1    10450 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10100 3600 10450 3600
+Text Label 9700 2050 2    50   ~ 0
+~RST
 $EndSCHEMATC
