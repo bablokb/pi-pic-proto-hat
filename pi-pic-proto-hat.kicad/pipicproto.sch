@@ -805,11 +805,7 @@ Wire Wire Line
 Wire Wire Line
 	1700 4950 1700 5850
 Wire Wire Line
-	8600 4700 8950 4700
-Wire Wire Line
-	8950 4700 8950 2400
-Wire Wire Line
-	8950 2400 7950 2400
+	8600 4700 8800 4700
 Text Label 5850 5300 2    50   ~ 0
 GPIO16
 Text Label 5250 5650 2    50   ~ 0
@@ -1280,19 +1276,14 @@ Connection ~ 4800 1600
 $Comp
 L Connector:Conn_01x01_Male J12
 U 1 1 5F23F4B8
-P 7950 2100
-F 0 "J12" V 8012 2144 50  0000 L CNN
-F 1 "Conn_01x01_Male" V 8103 2144 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7950 2100 50  0001 C CNN
-F 3 "~" H 7950 2100 50  0001 C CNN
-	1    7950 2100
-	0    1    1    0   
+P 8800 5100
+F 0 "J12" V 8650 5050 50  0000 L CNN
+F 1 "Conn_01x01_Male" V 8550 4800 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8800 5100 50  0001 C CNN
+F 3 "~" H 8800 5100 50  0001 C CNN
+	1    8800 5100
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7950 2400 7950 2300
-Connection ~ 7950 2400
-Wire Wire Line
-	7950 2400 7300 2400
 $Comp
 L Timer_RTC:DS3231M U3
 U 1 1 5F238501
@@ -1495,4 +1486,17 @@ Wire Wire Line
 	10100 3600 10450 3600
 Text Label 9700 2050 2    50   ~ 0
 ~RST
+Wire Wire Line
+	7300 2400 8950 2400
+Wire Wire Line
+	8950 2400 8950 4700
+Wire Wire Line
+	8800 4900 8800 4700
+Connection ~ 8800 4700
+Wire Wire Line
+	8800 4700 8950 4700
+Text Notes 7950 2350 0    50   ~ 0
+<- from PIC
+Text Notes 6650 850  0    50   ~ 0
+<- to Pi (+5V)
 $EndSCHEMATC
