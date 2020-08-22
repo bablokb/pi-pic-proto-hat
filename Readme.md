@@ -1,5 +1,8 @@
-The Pi-PIC-Proto-Hat (Development-branch)
-=========================================
+The Pi-PIC-Proto-Hat (Version 2)
+================================
+
+*Note: although the schematic and pcb-layout are complete for version 2,
+this readme and part of the images haven't been updated yet!*
 
 Overview
 --------
