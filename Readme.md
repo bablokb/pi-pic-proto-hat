@@ -1,8 +1,6 @@
 The Pi-PIC-Proto-Hat (Version 2)
 ================================
 
-*Note: although the schematic and pcb-layout are complete for version 2,
-this readme and part of the images haven't been updated yet!*
 
 Overview
 --------
@@ -39,9 +37,9 @@ The PIC part
 ![](schematic-pic.png)
 
 is a fairly standard implementation for the PIC featuring an
-ICSP (in-circuit-programming) connector J8
-and a connector for the pins GP0-GP2 and GP4-GP5. GP3 is connected to a
-switch. Pulling GP3 to ground will reset the MCU.
+ICSP (in-circuit-programming) connector J8. GP2 and GP4 are connected to
+connector, GP4 in addition to a switch and the interupt-pin of the RTC.
+GP3 is only connected to the ICSP connector and unused otherwise.
 
 If you are not using a MCU of the PIC-family, this is the part you must
 modify to fit your preferred MCU.
@@ -50,10 +48,11 @@ The power-supply part
 
 ![](schematic-mosfet.png)
 
-gives you multiple options for connecting a power-supply. J6 is for a
-barrel-jack (5mm/2.1mm-type). As an alternative, you can use J2. Power is fed
-to either the Pi via J1 (close with a jumper-shim) or to an external
-device via J3.
+connects a barrel-jack J6 (5mm/2.1mm-type) to the mosfet, which controls
+the 5V and 3.3V connectors of the Pi. J6 is also connected to J3/J11, which
+give you 5V independent of the state of the Pi. In addition, if you
+populate the 1117-regulator (U2), you also have permanent 3.3V on
+connectors J4/J5.
 
 The IRF4905 mosfet will switch power efficiently as long as the voltage
 of the gate is high enough. The 5V of the MCU is sufficient and the
@@ -89,32 +88,35 @@ but has smaller pins so you can use it directly on a breadboard.
 Part-List
 ---------
 
-|Part                | Value           | Number | Remark           |
-|--------------------|-----------------|--------|------------------|
-|C1                  | 100nF/50V       | 1      | Z5U-5            |
-|D1                  | BAT85           | 1      | Shottky          |
-|J1,J4,J5,J7-J10,J22 | SL 1x40G 2,54mm | 1.5    | vertical         |
-|J2,J3               | AKL381-2        | 2      | male, horizontal |
-|J6                  | CUI_PJ_102AH    | 1      | Adafruit         |
-|P1                  | BL 2x20G 2,54mm | 1      | vertical         |
-|Q1                  | IRF4905         | 1      | TO-220AB         |
-|R1                  | 10k 1/4W        | 1      | DIN 0207         |
-|R2,R3,R5,R6         | 1k 1/4W         | 4      |                  |
-|R4                  | 22k 1/4W        | 1      |                  |
-|U1                  | PIC12F675-IP    | 1      | + DIL-8 socket   |
+
+|Part                | Value           | Number | Remark               |
+|--------------------|-----------------|--------|----------------------|
+|C1,C4               | 100nF/50V       | 2      | SMD 1206             |
+|C2,C3               | 10µF            | 2      | SMD 1206 Tantal      |
+|D1,D2               | LED             | 2      | SMD 1206             |
+|J1-J5,J7-13         | SL 1x40G 2,54mm | 2      | vertical             |
+|J6 (barral jack)    | CUI_PJ_102AH    | 1      | Adafruit             |
+|P1 (Pi-socket)      | BL 2x20G 2,54mm | 1      | vertical             |
+|Q1                  | IRF4905         | 1      | TO-220AB             |
+|R1,R6               | 10k             | 2      | SMD 1206             |
+|R2,R3,R4,R5         | 1k              | 4      | SMD 1206             |
+|R7                  | 6.2k            | 1      | SMD 1206             |
+|R8                  | 12k             | 1      | SMD 1206             |
+|SW1                 |                 | 1      | slim switch          |
+|U1                  | PIC12F675-IP    | 1      | SO-8                 |
+|U2                  | TLV1117-33      | 1      | SOT-223 (or AMS1117) |
+|U3                  | DS3231M         | 1      | SOIC-16W             |
 
 
 Wiring
 ------
 
-The PIC is not connected to the mosfet by default. To connect the PIC with
-the mosfet, you have to add a connection from one of the IO-pins of the PIC
-(J9) to J5 and also close J4 with a jumper.
+Not all parts are necessary, e.g. you don't need to populate the RTC
+or the regulator. The two LEDs D2 (active power-supply) and D1 (power
+is provided to the Pi) are also optional (together with their resistors).
 
-When the gate of the mosfet is low, 5V will be at pin 2 of the mosfet. This
-is connected to the connector J3 (to provide power to an external device), and
-via jumper J1 with pins 2/4 of of the Pi. Depending on your usage-scenario,
-you might not need the connector J3 at all.
+You need to close jumper J1 (Run/~PGM) during normal operation. If you
+flash the firmware, this jumper should be open.
 
 Please be careful not to power the hat and the Pi at the same time.
  
@@ -123,10 +125,8 @@ Flashing a Firmware
 -------------------
 
 The required firmware for the PIC depends on the specific setup you choose.
-In the directory [example-setup](./example-setup/Readme.md)
-you will find a ready to flash hex-file for a very basic setup with a
-on/off-button as external signal. The firmware also supports a second
-external signal.
+In the directory [pic-firmware](./pic-firmware/Readme.md)
+you will find a ready to flash hex-file for the PIC.
 
 For flashing, you need a PICkit2-programmer, available for a few bucks from
 ebay. You can flash from Linux/Raspbian with the program `pk2cmd`. The hat
