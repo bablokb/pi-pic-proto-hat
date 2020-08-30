@@ -1,5 +1,8 @@
+Standard Firmware for Version 2
+===============================
+
 About
-=====
+-----
 
 This is a simple "firmware" for the v2 pi-pic-proto-hat:
 
@@ -28,7 +31,7 @@ v1-branch of this project!*
 
 
 PIC Configuration
-=================
+-----------------
 
   - GP0: PIN_FROM_PI (low->high, connected to GPIO16 on the Pi-side (physical
     pin 36). This is the same pin as in the gpio-poweroff overlay.
@@ -46,7 +49,7 @@ connected to the Pi. The v2-pcb integrates this voltage devider.
 
 
 Pi Configuration
-================
+----------------
 
 On the Pi-side you have to add the following lines in your
 /boot/config.xt:
@@ -58,7 +61,7 @@ On the Pi-side you have to add the following lines in your
 
 
 Building
-========
+--------
 
 You need sdcc, gpasm and pk2cmd to build and flash the firmware. Please
 adapt the paths within the file `rules.inc` to suit your setup.
