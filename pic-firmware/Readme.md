@@ -17,6 +17,8 @@ This is a simple "firmware" for the v2 pi-pic-proto-hat:
     This pin in turn is connected to and monitored by the PIC. The PIC
     sets the gate to high thus turning power off.
 
+![](schematic.png)
+
 The simplest "external signal" is a button connected to the PIC and to GND.
 Version 2 of the pi-pic-proto-hat connects such a button to GP4. In addition,
 the RTC-interrupt pin (alarm) is also connected to GP4.
