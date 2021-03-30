@@ -27,5 +27,5 @@ On the Pi-side you have to add the following lines in your
 
 You can find the source-code of the firmware, along with additional
 information about necessary connections and configurations on the Pi-side
-in the directory `src/rpi_mosfet_on_off` in the project
+in the directory `projects/rpi_mosfet_on_off` in the project
 [pic-toolchain](https://github.com/bablokb/pic-toolchain).
